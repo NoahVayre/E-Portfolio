@@ -15,4 +15,4 @@ This e-portfolio collects my academic projects, mobility intentions, civic engag
 
 **Contact**
 - Email: noah.vayre@etu.toulouse-inp.fr 
-- LinkedIn (EN): [LinkedIn profile]((https://www.linkedin.com/in/noah-vayre))  
+- LinkedIn (EN): [LinkedIn profile](https://www.linkedin.com/in/noah-vayre)  
