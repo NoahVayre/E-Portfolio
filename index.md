@@ -14,5 +14,5 @@ This e-portfolio collects my academic projects, mobility intentions, civic engag
 - Career Development: CVs (EN/FR), LinkedIn, Elevator Pitch
 
 **Contact**
-- Email: your.email@example.com  
+- Email: noah.vayre@etu.toulouse-inp.fr 
 - LinkedIn (EN): [LinkedIn profile]((https://www.linkedin.com/in/noah-vayre))  
