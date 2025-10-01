@@ -1,9 +1,9 @@
-[Home](index.md) | [Engineering](engineering.md) | [Mobility](mobility.md) | [Civic Engagement](civic.md) | [Sports](sports.md) | [Career](career.md)
+[Home](index_en.md) | [Engineering](engineering_en.md) | [Mobility](mobility_en.md) | [Civic Engagement](civic_en.md) | [Sports & Activities](sports_en.md) | [Career](career_en.md)
 ---
 
 # Welcome
 
-Hello — I'm **Noah Vayre**, a 3rd-year engineering student at ENSEEIHT (specialisation: Electronics, Energy & Automation).  
+Hello — I'm **Noah Vayre**, a 1st-year engineering student at ENSEEIHT (specialisation: Electronics, Energy & Automation).  
 This e-portfolio collects my academic projects, mobility intentions, civic engagement, extracurricular activities and career documents.
 
 **What you will find here**

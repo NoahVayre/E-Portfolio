@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>E-portfolio Bilingue</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #langSelect { position: fixed; top: 10px; right: 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- Sélecteur de langue -->
+  <select id="langSelect">
+    <option value="fr">FR</option>
+    <option value="en">EN</option>
+  </select>
+
+  <!-- Contenu Markdown -->
+  <div id="content">Chargement...</div>
+
+  <!-- marked.js pour convertir Markdown en HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const select = document.getElementById("langSelect");
+    const contentDiv = document.getElementById("content");
+
+    // Récupérer la langue sauvegardée ou mettre FR par défaut
+    let lang = localStorage.getItem("lang") || "fr";
+    select.value = lang;
+
+    // Fonction pour charger le fichier Markdown
+    function loadMarkdown(page) {
+      fetch(page)
+        .then(res => res.text())
+        .then(md => { contentDiv.innerHTML = marked.parse(md); });
+    }
+
+    // Charger le Markdown correspondant
+    loadMarkdown(`index_${lang}.md`);
+
+    // Changer de langue
+    select.addEventListener("change", () => {
+      lang = select.value;
+      localStorage.setItem("lang", lang);
+      loadMarkdown(`index_${lang}.md`);
+    });
+  </script>
+
+</body>
+</html>

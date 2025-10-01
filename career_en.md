@@ -1,4 +1,4 @@
-[Home](index.md) | ...
+[Home](index_en.md) | ...
 ---
 
 # Career Development
@@ -8,8 +8,8 @@
 - [Download CV — Français](assets/CV_Noah_Vayre_FR.pdf)
 
 ## LinkedIn
-- LinkedIn (EN): https://www.linkedin.com/in/your-linkedin
-- LinkedIn (FR): https://www.linkedin.com/in/your-linkedin-fr
+- LinkedIn (EN): https://www.linkedin.com/in/noah-vayre
+- LinkedIn (FR): https://www.linkedin.com/in/noah-vayre
 
 ## Elevator Pitch (2–3 min)
 <!-- Embed YouTube video: replace VIDEO_ID -->
