@@ -31,9 +31,16 @@
 
     // Fonction pour charger le fichier Markdown
     function loadMarkdown(page) {
+      contentDiv.innerHTML = "<p>Chargement...</p>"; // Message temporaire
       fetch(page)
-        .then(res => res.text())
-        .then(md => { contentDiv.innerHTML = marked.parse(md); });
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`Erreur : Impossible de charger ${page}`);
+          }
+          return res.text();
+        })
+        .then(md => { contentDiv.innerHTML = marked.parse(md); })
+        .catch(err => { contentDiv.innerHTML = `<p>${err.message}</p>`; });
     }
 
     // Charger le Markdown correspondant
@@ -44,6 +51,19 @@
       lang = select.value;
       localStorage.setItem("lang", lang);
       loadMarkdown(`index_${lang}.md`);
+    });
+
+    // Intercepter les clics sur les liens
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+
+      // Vérifiez si le clic est sur un lien
+      if (target.tagName === "A" && target.getAttribute("href").endsWith(".md")) {
+        event.preventDefault(); // Empêche le chargement par défaut
+
+        const page = target.getAttribute("href");
+        loadMarkdown(page); // Charge dynamiquement le fichier Markdown
+      }
     });
   </script>
 
