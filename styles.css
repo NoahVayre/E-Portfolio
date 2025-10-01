@@ -64,3 +64,71 @@ p {
 .emoji {
   font-size: 1.2em;
 }
+
+
+
+/* Style spécifique pour le contenu Markdown */
+.markdown-body {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Style pour les titres */
+.markdown-body h1 {
+  font-size: 2.5em;
+  color: #0056b3;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.markdown-body h2 {
+  font-size: 2em;
+  color: #0056b3;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  color: #0056b3;
+}
+
+/* Style pour les listes */
+.markdown-body ul {
+  margin: 20px 0;
+  padding-left: 40px;
+}
+
+.markdown-body ul li {
+  margin-bottom: 10px;
+}
+
+/* Style pour les liens */
+.markdown-body a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+/* Style pour les séparateurs */
+.markdown-body hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 40px 0;
+}
+
+/* Style pour les paragraphes */
+.markdown-body p {
+  margin: 10px 0;
+}
