@@ -176,15 +176,15 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const lang = localStorage.getItem("lang") || "en"; // Récupère la langue ou utilise "en" par défaut
+    const lang = localStorage.getItem("lang") || "fr"; // Récupère la langue ou utilise "en" par défaut
 
     // Charger les contenus dans leurs conteneurs respectifs
     loadPage(`index_${lang}.html`, "index-content");
     loadPage(`about_${lang}.html`, "about-content");
-    loadPage(`resume_${lang}.html`, "resume-content");
-    loadPage(`portfolio_${lang}.html`, "portfolio-content");
-    loadPage(`blog_${lang}.html`, "blog-content");
-    loadPage(`contact_${lang}.html`, "contact-content");
+    loadPage(`engineering_${lang}.html`, "resume-content");
+    loadPage(`civic_${lang}.html`, "portfolio-content");
+    loadPage(`career_${lang}.html`, "blog-content");
+    loadPage(`mobility_${lang}.html`, "contact-content");
   });
 </script>
  
@@ -205,18 +205,8 @@
 
         </section>
 -->
-    <div id="about-content" class="content-section">
-        <section id="about" class="mt-0">
-          <div id="dynamic-content">
-            <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                const lang = localStorage.getItem("lang") || "fr"; // Récupère la langue ou utilise "fr" par défaut
-                loadPage(`about_${lang}.html`, "about-content"); // Charge la page correspondante
-              });
-            </script>
-          </div>
-        </section>
-    </div>
+    
+    <div id="about-content" class="content-section"></div>
 
 <!--about
         <section id="about" class="mt-0">
@@ -478,7 +468,10 @@
         </section>
 -->
 
-        <section id="resume">
+    <div id="resume-content" class="content-section"></div>
+
+<!--resume    
+    <section id="resume">
             <div class="py-4 my-4 ">
                 <h1 class="fw-bold mt-5">Resume</h1>
             </div>
@@ -618,7 +611,11 @@
             </div>
 
         </section>
+    -->
+        
+    <div id="portfolio-content" class="content-section"></div>    
 
+<!--portfolio        
         <section id="portfolio">
 
 
@@ -735,7 +732,11 @@
             </div>
 
         </section>
-
+    -->
+        
+    <div id="blog-content" class="content-section"></div>
+      
+ <!--blog   
         <section id="blog">
 
             <div class="py-4 my-4 ">
@@ -871,7 +872,11 @@
 
             </div>
         </section>
+    -->
 
+    <div id="contact-content" class="content-section"></div>
+
+<!--contact        
         <section id="contact">
 
             <div class="py-4 my-4 ">
@@ -970,7 +975,7 @@
                 </div>
 
         </section>
-
+    -->
     
 </div>
 <!-- ________________________________________________________________________________________________________________________________________________
