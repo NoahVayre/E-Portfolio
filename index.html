@@ -51,7 +51,12 @@
   select.addEventListener("change", () => {
     lang = select.value;
     localStorage.setItem("lang", lang);
-    loadPage(`index_${lang}.html`);
+        loadPage(`index_${lang}.html`, "index-content");
+        loadPage(`about_${lang}.html`, "about-content");
+        loadPage(`engineering_${lang}.html`, "resume-content");
+        loadPage(`civic_${lang}.html`, "portfolio-content");
+        loadPage(`career_${lang}.html`, "blog-content");
+        loadPage(`mobility_${lang}.html`, "contact-content");
   });
 
   document.addEventListener("click", (event) => {
@@ -59,7 +64,12 @@
     if (target.tagName === "A" && target.getAttribute("href").endsWith(".md")) {
       event.preventDefault();
       const page = target.getAttribute("href");
-      loadPage(page);
+        loadPage(`index_${lang}.html`, "index-content");
+        loadPage(`about_${lang}.html`, "about-content");
+        loadPage(`engineering_${lang}.html`, "resume-content");
+        loadPage(`civic_${lang}.html`, "portfolio-content");
+        loadPage(`career_${lang}.html`, "blog-content");
+        loadPage(`mobility_${lang}.html`, "contact-content");
     }
   });
 </script>
@@ -132,25 +142,25 @@
             </a>
         </li>
         <li>
-            <a href="#resume" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+            <a href="#engineering" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
                 aria-label="Orders" data-bs-original-title="Orders">
                 <iconify-icon icon="ic:round-school"></iconify-icon>
             </a>
         </li>
         <li>
-            <a href="#portfolio" class="nav-link rounded-0" data-bs-toggle="tooltip"
+            <a href="#civic" class="nav-link rounded-0" data-bs-toggle="tooltip"
                 data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
                 <iconify-icon icon="ic:round-business-center"></iconify-icon>
             </a>
         </li>
         <li>
-            <a href="#blog" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+            <a href="#career" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
                 aria-label="Customers" data-bs-original-title="Customers">
                 <iconify-icon icon="ic:round-menu-book"></iconify-icon>
             </a>
         </li>
         <li>
-            <a href="#contact" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+            <a href="#mobility" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
                 aria-label="Customers" data-bs-original-title="Customers">
                 <iconify-icon icon="ic:round-phone"></iconify-icon>
             </a>
