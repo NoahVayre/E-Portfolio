@@ -850,3 +850,13 @@ team section style start
 .heading-color {
   color: var(--accent-color);
 }
+
+
+
+.content-section {
+  margin-bottom: 50px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
