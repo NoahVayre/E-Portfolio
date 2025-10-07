@@ -392,7 +392,7 @@ ul.nav.nav-pills {
 @media only screen and (max-width: 1200px) {
 
   section.navigation {
-    z-index: 99999;
+    z-index: 9999;
   }
 
   ul.nav.text-center {
@@ -852,7 +852,6 @@ team section style start
 }
 
 
-
 .content-section {
   margin-bottom: 50px;
   padding: 20px;
@@ -861,3 +860,63 @@ team section style start
   background-color: #f9f9f9;
 }
 
+
+
+/**-------------------------------------------------------------- */
+
+/*
+
+#langSelect {
+  position: fixed;
+  top: 10px ;
+  right: 10px ;
+  z-index: 999999 !important;
+  background-color: #ffffff !important;
+  border: 2px solid #007bff !important;
+  padding: 8px 12px !important;
+  border-radius: 5px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #333 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Effet au survol */
+
+#langSelect:hover {
+  background-color: #007bff; /* Change la couleur de fond au survol */
+  color: #ffffff; /* Change la couleur du texte au survol */
+  border-color: #0056b3; /* Change la couleur de la bordure au survol */
+}
+
+/* Effet au focus */
+
+#langSelect:focus {
+  outline: none; /* Supprime le contour par défaut */
+  box-shadow: 0 0 10px #007bff; /* Ajoute un effet lumineux */
+}
+
+#langSelect option {
+  background-color: #ffffff; /** Fond blanc pour les options */
+  color: var(--dark-color); /** Couleur du texte */
+  padding: 10px; /** Ajoute de l'espace intérieur */
+  font-size: 14px; /** Taille de la police */
+}
+/*
+#langSelect {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+*/ 
