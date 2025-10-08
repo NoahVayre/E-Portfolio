@@ -891,7 +891,7 @@ team section style start
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
   font-size: 14px !important;
   font-weight: bold !important;
-  color: #3E4E1A !important; /* texte vert foncé */
+  color: rgb(50, 61, 23) !important; /* texte vert foncé */
   cursor: pointer !important;
   transition: all 0.3s ease !important;
 }
