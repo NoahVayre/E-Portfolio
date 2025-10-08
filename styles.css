@@ -408,6 +408,19 @@ ul.nav.nav-pills {
     justify-content: space-evenly;
   }
 
+  ul.nav.text-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    margin: 0px;
+    border-radius: 0px;
+    display: flex;
+    padding: 0px;
+    justify-content: space-evenly;
+  }
+
 }
 
 
@@ -864,59 +877,47 @@ team section style start
 
 /**-------------------------------------------------------------- */
 
-/*
+
 
 #langSelect {
   position: fixed;
-  top: 10px ;
-  right: 10px ;
+  top: 10px;
+  right: 10px;
   z-index: 999999 !important;
-  background-color: #ffffff !important;
-  border: 2px solid #007bff !important;
+  background-color: rgba(167, 201, 87, 0.2) !important; /* vert clair translucide */
+  border: 2px solid #6B8E23 !important; /* vert olive */
   padding: 8px 12px !important;
   border-radius: 5px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
   font-size: 14px !important;
   font-weight: bold !important;
-  color: #333 !important;
+  color: #3E4E1A !important; /* texte vert foncé */
   cursor: pointer !important;
   transition: all 0.3s ease !important;
 }
 
-/* Effet au survol */
-
 #langSelect:hover {
-  background-color: #007bff; /* Change la couleur de fond au survol */
-  color: #ffffff; /* Change la couleur du texte au survol */
-  border-color: #0056b3; /* Change la couleur de la bordure au survol */
+  background-color: #6B8E23 !important;
+  color: #fff !important;
+  border-color: #4C6821 !important;
 }
 
-/* Effet au focus */
-
 #langSelect:focus {
-  outline: none; /* Supprime le contour par défaut */
-  box-shadow: 0 0 10px #007bff; /* Ajoute un effet lumineux */
+  outline: none !important;
+  box-shadow: 0 0 10px rgba(107, 142, 35, 0.6) !important;
 }
 
 #langSelect option {
-  background-color: #ffffff; /** Fond blanc pour les options */
-  color: var(--dark-color); /** Couleur du texte */
-  padding: 10px; /** Ajoute de l'espace intérieur */
-  font-size: 14px; /** Taille de la police */
+  background-color: #f7fff0 !important;
+  color: #3E4E1A !important;
+  padding: 10px !important;
 }
-/*
+
 #langSelect {
   animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-*/ 
