@@ -925,16 +925,6 @@ team section style start
 
 
 /**-------------------------------------------------------------- */
-/* Style spécifique pour l'icône N7 */
-.n7-icon {
-    width: 30px !important;
-    height: 30px !important;
-    vertical-align: middle !important;
-    object-fit: contain !important;
-    display: inline-block !important;
-    transition: filter 0.03s ease; /* Animation douce */
-}
-
 .icon-blue {
   filter: invert(46%) sepia(100%) saturate(1500%) hue-rotate(190deg) brightness(95%) contrast(100%); /* état neutre par bleu */
   display: inline-block;
@@ -942,7 +932,7 @@ team section style start
 }
 
 
-/* Au survol, applique un filtre qui donne une teinte bleue */
+/* Au survol, applique un filtre qui donne une teinte orange */
 .social-link:hover .icon-blue {
   /* valeurs approximatives pour obtenir un bleu "classique" */
   filter: brightness(0) /* Rend l'image noire */ 
@@ -952,7 +942,8 @@ team section style start
            saturate(1760%) /* Augmente la saturation */
            hue-rotate(334deg) /* Ajuste la teinte vers l'orange */
            brightness(102%) /* Ajuste la luminosité */
-           contrast(101%) !important; /* Ajuste le contraste */}
+           contrast(101%) !important; /* Ajuste le contraste */
+}
 
 /* Style pour aligner tous les icônes sociaux */
 .social-link {
@@ -966,6 +957,20 @@ team section style start
     width: 30px;
     height: 30px;
 }
+
+
+
+/* Style spécifique pour l'icône N7 */
+.n7-icon {
+    width: 30px !important;
+    height: 30px !important;
+    vertical-align: middle !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+    transition: filter 0.03s ease; /* Animation douce */
+}
+
+
 
 /* Effet au survol */
 .social-link:hover .n7-icon {
