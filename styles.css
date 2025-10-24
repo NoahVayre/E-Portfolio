@@ -925,14 +925,38 @@ team section style start
 
 
 /**-------------------------------------------------------------- */
-.social-icon-img.n7-icon,
-.hero-sidebar .social-link .social-icon-img.n7-icon {
-  height: 10px !important;
-  width: auto !important;
-  max-height: 10px !important;
-  object-fit: contain !important;
-  display: inline-block !important;
-  vertical-align: middle !important;
+/* Style spécifique pour l'icône N7 */
+.n7-icon {
+    width: 20px !important;
+    height: 20px !important;
+    vertical-align: middle !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+    transition: filter 0.3s ease; /* Animation douce */
 }
-/* règle générale icônes sociales */
-.social-icon-img { height: 20px; width: auto; object-fit: contain; vertical-align: middle; }
+
+
+/* Style pour aligner tous les icônes sociaux */
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link img,
+.social-link iconify-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Effet au survol */
+.social-link:hover .n7-icon {
+    filter: brightness(0) /* Rend l'image noire */ 
+           saturate(100%) /* Maintient la saturation */
+           invert(55%) /* Inverse les couleurs */
+           sepia(98%) /* Ajoute un effet sépia */
+           saturate(1760%) /* Augmente la saturation */
+           hue-rotate(334deg) /* Ajuste la teinte vers l'orange */
+           brightness(102%) /* Ajuste la luminosité */
+           contrast(101%) !important; /* Ajuste le contraste */
+}
