@@ -954,16 +954,16 @@ team section style start
 
 .social-link img,
 .social-link iconify-icon {
-    width: 30px;
-    height: 30px;
+    /*width: 30px;
+    height: 30px;*/
 }
 
 
 
 /* Style spécifique pour l'icône N7 */
 .n7-icon {
-    width: 30px !important;
-    height: 30px !important;
+    /*width: 30px !important;
+    height: 30px !important;*/
     vertical-align: middle !important;
     object-fit: contain !important;
     display: inline-block !important;
