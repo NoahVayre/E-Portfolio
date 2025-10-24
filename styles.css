@@ -927,14 +927,23 @@ team section style start
 /**-------------------------------------------------------------- */
 /* Style spécifique pour l'icône N7 */
 .n7-icon {
-    width: 20px !important;
-    height: 20px !important;
+    width: 35px !important;
+    height: 35px !important;
     vertical-align: middle !important;
     object-fit: contain !important;
     display: inline-block !important;
     transition: filter 0.3s ease; /* Animation douce */
 }
 
+/* Style spécifique pour l'icône GitHub */
+.github-icon {
+    filter: invert(46%) sepia(9%) saturate(498%) hue-rotate(182deg) brightness(94%) contrast(87%);
+}
+
+/* Effet hover pour l'icône GitHub */
+.social-link:hover .github-icon {
+    filter: invert(35%) sepia(95%) saturate(1007%) hue-rotate(177deg) brightness(96%) contrast(88%);
+}
 
 /* Style pour aligner tous les icônes sociaux */
 .social-link {
@@ -945,8 +954,8 @@ team section style start
 
 .social-link img,
 .social-link iconify-icon {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
 }
 
 /* Effet au survol */
