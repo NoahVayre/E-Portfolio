@@ -1053,25 +1053,23 @@
                                 width="140" height="140" loading="lazy">
 
 
-                            <h2 class="fw-bold mt-3">Carl Brown</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam risus nam ma aliquet.
-                                Libero
-                                porta in sodales.</p>
+                            <h2 class="fw-bold mt-3">Noah Vayre</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <div class="social-icon my-3">
                                 <p>
                                     <a class="social-link mx-3 active" href="#"> <iconify-icon
                                             icon="icomoon-free:facebook"></iconify-icon> </a>
                                     <a class="social-link mx-3 " href="#"> <iconify-icon
                                             icon="icomoon-free:instagram"></iconify-icon> </a>
-                                    <a class="social-link mx-3 " href="#"> <iconify-icon
-                                            icon="icomoon-free:twitter"></iconify-icon> </a>
+                                    <a class="social-link mx-3 " href="https://www.enseeiht.fr/fr/index.html"> 
+                                          <img src="images/N7.ico" alt="N7" class="social-icon-img n7-icon" loading="lazy"></a>
                                     <a class="social-link mx-3 " href="#"> <iconify-icon
                                             icon="icomoon-free:youtube"></iconify-icon> </a>
                                 </p>
 
                             </div>
 
-                            <h4 class=" text-uppercase text-light fs-5 fw-bold py-2 mx-5 mt-5">Pro Pages</h4>
+                            <h4 class=" text-uppercase text-light fs-5 fw-bold py-2 mx-5 mt-5">Tools</h4>
 
                             <ul class="text-center list-unstyled">
                                 <li><a href="blog-single.html" class="text-uppercase "><span
@@ -1097,11 +1095,9 @@
                             </ul>
 
                             <div>
-                                <a href="https://templatesjungle.gumroad.com/l/carl-free-bootstrap-5-html-website-template-for-portfolio"
-                                    class="btn btn-primary get-pro text-uppercase rounded-5 py-3 px-4 mt-3">Start <iconify-icon icon="mdi:cart" class="ps-2" style="color: white;"></iconify-icon>
+                                <a id="cvButton" href="assets/CV_Noah_Vayre_FR.pdf" class="btn btn-primary get-pro text-uppercase rounded-5 py-3 px-4 mt-3">
+                                    CV
                                 </a>
-                            </div>
-
                         </div>
 
 
@@ -1120,6 +1116,25 @@
         </div>
     </div>
 
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const select = document.getElementById("langSelect"); // Sélecteur de langue
+    const cvButton = document.getElementById("cvButton"); // Bouton CV
+
+    // Fonction pour mettre à jour le lien du CV
+    const updateCvLink = () => {
+        const lang = select.value; // Récupère la langue sélectionnée
+        cvButton.href = `assets/CV_Noah_Vayre_${lang}.pdf`; // Met à jour le lien
+    };
+
+    // Met à jour le lien au chargement de la page
+    updateCvLink();
+
+    // Met à jour le lien lorsque la langue change
+    select.addEventListener("change", updateCvLink);
+    });
+</script>
 
 
 <script>

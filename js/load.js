@@ -18,3 +18,9 @@ function loadPage(page, containerId) {
       container.innerHTML = `<p style="color:red;">Failed to load ${page}: ${error.message}</p>`;
     });
 }
+
+
+
+
+
+
