@@ -422,6 +422,23 @@ ul.nav.nav-pills {
 }
 
 
+/* supprimer le contour bleu au chargement (garder focus-visible pour clavier) */
+#navigation-bar .nav-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#navigation-bar .nav-link:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* si tu veux un indicateur accessible pour clavier */
+#navigation-bar .nav-link:focus-visible {
+  outline: 2px solid rgba(242,102,73,0.9); /* accent color */
+  outline-offset: 2px;
+}
+
 /* ----------  hero section  ---------- */
 header {
   background-color: var(--dark-color);

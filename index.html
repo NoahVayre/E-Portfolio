@@ -1166,6 +1166,18 @@ document.addEventListener("click", (event) => {
 });
 </script>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // enlève le focus sur le lien actif au chargement pour éviter le carré bleu initial
+  const activeLink = document.querySelector('#navigation-bar .nav-link.active');
+  if (activeLink && document.activeElement === activeLink) activeLink.blur();
+
+  // sécurité : s'assurer que le lien actif n'est pas automatiquement focusable
+  if (activeLink) activeLink.setAttribute('tabindex', '-1');
+});
+</script>
+
     
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/plugins.js"></script>
