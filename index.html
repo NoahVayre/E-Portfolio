@@ -33,11 +33,12 @@
 
     // Charger les contenus dans leurs conteneurs respectifs
     loadPage(`index_${lang}.html`, "index-content");
+    loadPage(`engineering_${lang}.html`, "engineering-content");
+    loadPage(`mobility_${lang}.html`, "mobility-content");
+    loadPage(`civic_${lang}.html`, "civic-content");
+    loadPage(`activity_${lang}.html`, "activity-content");
+    loadPage(`career_${lang}.html`, "career-content");
     loadPage(`about_${lang}.html`, "about-content");
-    loadPage(`engineering_${lang}.html`, "resume-content");
-    loadPage(`civic_${lang}.html`, "portfolio-content");
-    loadPage(`career_${lang}.html`, "blog-content");
-    loadPage(`mobility_${lang}.html`, "contact-content");
   });
 </script>
 
@@ -112,63 +113,69 @@
                 </div>
                 <div class="offcanvas-body">
                     <header class="hero position-fixed">
-                        <div class="container hero-container text-center align-content-between">
+                        <!-- Sélecteur de langue -->
+                        <div class="align-content-between langSelect">
+                        <select id="langSelect">
+                            <option value="fr">FR</option>
+                            <option value="en">EN</option>
+                        </select>
+                        </div>
+                        <div class="container hero-container text-center my-4 pt-3 align-content-between">
 
                             <div>
                                 <img src="images/carlbrown.png" class="hero-img mb-4 rounded-circle" alt="Bootstrap Themes"
                                     width="140" height="140" loading="lazy">
 
 
-                                <h2 class="fw-bold">Carl Brown</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam risus nam ma aliquet.
-                                    Libero
-                                    porta in sodales.</p>
-                                <div class="social-icon my-2">
+                                <h2 class="fw-bold mt-3">Noah Vayre</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <div class="social-icon my-3">
                                     <p>
-                                        <a class="social-link mx-3 active" href="#"> <iconify-icon
-                                                icon="icomoon-free:facebook"></iconify-icon> </a>
-                                        <a class="social-link mx-3 " href="#"> <iconify-icon
-                                                icon="icomoon-free:instagram"></iconify-icon> </a>
-                                        <a class="social-link mx-3 " href="#"> <iconify-icon
-                                                icon="icomoon-free:twitter"></iconify-icon> </a>
-                                        <a class="social-link mx-3 " href="#"> <iconify-icon
-                                                icon="icomoon-free:youtube"></iconify-icon> </a>
+                                        <a class="social-link mx-3 " href="https://github.com/NoahVayre"> 
+                                            <img src="images/github.png" alt="GitHub" class="social-icon img icon-blue" style="width: 35px; height: 35px;"></a>
+                                        <a class="social-link mx-3 " href="https://www.linkedin.com/in/noah-vayre"> 
+                                            <img src="images/linkedin.jpg" alt="Linkedin" class="social-icon img icon-blue" style="width: 35px; height: 35px;"></a>
+                                        <a class="social-link mx-3 " href="https://www.enseeiht.fr/fr/index.html"> 
+                                            <img src="images/N7.png" alt="N7" class="n7-icon icon-blue" style="width: 35px; height: 35px;"></a>
                                     </p>
 
                                 </div>
 
-                                <h4 class=" text-uppercase text-light fs-5 fw-bold py-2 mx-5 mt-4 ">Pro Pages</h4>
+                                <h4 class=" text-uppercase text-light fs-5 fw-bold py-2 mx-5 mt-5">Tools</h4>
 
                                 <ul class="text-center list-unstyled">
-                                    <li><a href="blog-single.html" class="text-uppercase ">Blog-Single
-                                            <span class="badge bg-secondary">Pro</span></a></li>
-                                    <li><a href="services-single.html" class="text-uppercase ">Service-Single
-                                            <span class="badge bg-secondary">Pro</span></a></li>
-                                    <li><a href="portfolio-single.html" class="text-uppercase ">Portfolio-Single
-                                            <span class="badge bg-secondary">Pro</span></a></li>
-                                    <li><a href="contact.html" class="text-uppercase ">Contact <span
-                                                class="badge bg-secondary">Pro</span></a></li>
-                                    <li><a href="team.html" class="text-uppercase ">My Team <span
-                                                class="badge bg-secondary">Pro</span></a></li>
-                                    <li><a href="review.html" class="text-uppercase ">Reviews <span
-                                                class="badge bg-secondary">Pro</span></a></li>
-                                    <li><a href="faq.html" class="text-uppercase ">FAQs <span
-                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="blog-single.html" class="text-uppercase "><span
+                                                class="badge bg-secondary">Blog-Single</span>
+                                    </a></li>
+                                    <li><a href="services-single.html" class="text-uppercase "><span
+                                                class="badge bg-secondary">Services-Single</span>
+                                    </a></li>
+                                    <li><a href="portfolio-single.html" class="text-uppercase "><span
+                                                class="badge bg-secondary">Portfolio-Single</span>
+                                    </a></li>
+                                    <li><a href="contact.html" class="text-uppercase "><span
+                                                class="badge bg-secondary">Contact</span>
+                                    </a></li>
+                                    <li><a href="team.html" class="text-uppercase "><span
+                                                class="badge bg-secondary">Team</span>
+                                    </a></li>
+                                    <li><a href="review.html" class="text-uppercase "><span
+                                                class="badge bg-secondary">Reviews</span>
+                                    </a></li>
+                                    <li><a href="faq.html" class="text-uppercase "><span
+                                                class="badge bg-secondary">FAQs</span></a></li>
                                 </ul>
 
                                 <div>
-                                    <a href="https://templatesjungle.gumroad.com/l/carl-free-bootstrap-5-html-website-template-for-portfolio"
-                                        class="btn btn-primary get-pro text-uppercase rounded-5 py-3 px-4 mt-2">Get
-                                        Pro <iconify-icon icon="mdi:cart" class="ps-2" style="color: white;"></iconify-icon>
+                                    <a id="cvButton" href="assets/CV_Noah_Vayre_fr.pdf" class="btn btn-primary get-pro text-uppercase rounded-5 py-3 px-4 mt-3">
+                                        CV
                                     </a>
-                                </div>
-
                             </div>
 
 
                             <div class="mb-5">
-                                <p class="copyright ">© Free HTML template by: <a href="https://templatesjungle.com/">
-                                        <u>TemplatesJungle </u> </a> </p>
+                                <p class="copyright ">© Noah Vayre 2025
+                                </p>
                             </div>
 
 
@@ -221,6 +228,12 @@
                             <iconify-icon icon="ic:round-phone"></iconify-icon>
                         </a>
                     </li>
+                    <li>
+                        <a href="#activity" class="nav-link rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
+                            aria-label="Customers" data-bs-original-title="Customers">
+                            <iconify-icon icon="ic:round-phone"></iconify-icon>
+                        </a>
+                    </li>
                 </ul>
             </section>
             <!-- Navbar (identique sur toutes les pages) 
@@ -243,6 +256,7 @@
 
                     <!-- ________________________________________________________________________________________________________________________________________________
                     -->    
+                        
                         <div id="index-content" class="content-section"></div>
                     <!--home
                                 <div class=" py-lg-4 my-lg-4 text-center">
@@ -259,8 +273,6 @@
 
                             </section>
                     -->
-                        
-                        <div id="about-content" class="content-section"></div>
 
                     <!--about
                             <section id="about" class="mt-0">
@@ -522,7 +534,7 @@
                             </section>
                     -->
 
-                        <div id="resume-content" class="content-section"></div>
+                        <div id="engineering-content" class="content-section"></div>
 
                     <!--resume    
                         <section id="resume">
@@ -667,7 +679,7 @@
                             </section>
                         -->
                             
-                        <div id="portfolio-content" class="content-section"></div>    
+                        <div id="civic-content" class="content-section"></div>    
 
                     <!--portfolio        
                             <section id="portfolio">
@@ -788,7 +800,7 @@
                             </section>
                         -->
                             
-                        <div id="blog-content" class="content-section"></div>
+                        <div id="career-content" class="content-section"></div>
                         
                     <!--blog   
                             <section id="blog">
@@ -928,7 +940,7 @@
                             </section>
                         -->
 
-                        <div id="contact-content" class="content-section"></div>
+                        <div id="mobility-content" class="content-section"></div>
 
                     <!--contact        
                     <section id="contact">
@@ -1030,6 +1042,8 @@
 
                     </section>
                 -->
+                        <div id="activity-content" class="content-section"></div>
+                        <div id="about-content" class="content-section"></div>
             </div>
 
 <!-- ________________________________________________________________________________________________________________________________________________
@@ -1145,10 +1159,11 @@ select.addEventListener("change", () => {
     localStorage.setItem("lang", lang);
         loadPage(`index_${lang}.html`, "index-content");
         loadPage(`about_${lang}.html`, "about-content");
-        loadPage(`engineering_${lang}.html`, "resume-content");
-        loadPage(`civic_${lang}.html`, "portfolio-content");
-        loadPage(`career_${lang}.html`, "blog-content");
-        loadPage(`mobility_${lang}.html`, "contact-content");
+        loadPage(`engineering_${lang}.html`, "engineering-content");
+        loadPage(`civic_${lang}.html`, "civic-content");
+        loadPage(`career_${lang}.html`, "career-content");
+        loadPage(`mobility_${lang}.html`, "mobility-content");
+        loadPage(`activity_${lang}.html`, "activity-content");
 });
 
 document.addEventListener("click", (event) => {
@@ -1158,14 +1173,14 @@ document.addEventListener("click", (event) => {
     const page = target.getAttribute("href");
         loadPage(`index_${lang}.html`, "index-content");
         loadPage(`about_${lang}.html`, "about-content");
-        loadPage(`engineering_${lang}.html`, "resume-content");
-        loadPage(`civic_${lang}.html`, "portfolio-content");
-        loadPage(`career_${lang}.html`, "blog-content");
-        loadPage(`mobility_${lang}.html`, "contact-content");
+        loadPage(`engineering_${lang}.html`, "engineering-content");
+        loadPage(`civic_${lang}.html`, "civic-content");
+        loadPage(`career_${lang}.html`, "career-content");
+        loadPage(`mobility_${lang}.html`, "mobility-content");
+        loadPage(`activity_${lang}.html`, "activity-content");
     }
 });
 </script>
-
 
 
     
