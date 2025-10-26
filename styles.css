@@ -848,7 +848,7 @@ team section style start
 
 
 .icon-grey {
-  filter: grayscale(100%) brightness(115%) contrast(90%);
+  filter: grayscale(100%) brightness(75%) contrast(75%);
   display: inline-block;
   vertical-align: middle;
   transition: filter 0.3s ease; /* Animation fluide lors du survol */
