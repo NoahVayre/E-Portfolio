@@ -983,3 +983,25 @@ team section style start
            brightness(102%) /* Ajuste la luminosité */
            contrast(101%) !important; /* Ajuste le contraste */
 }
+
+
+
+.icon-grey {
+  filter: grayscale(100%) brightness(80%) contrast(100%);
+  display: inline-block;
+  vertical-align: middle;
+  transition: filter 0.3s ease; /* Animation fluide lors du survol */
+}
+
+
+/* Au survol, applique un filtre qui donne une teinte orange */
+.social-link:hover .icon-grey {
+  filter: brightness(0)
+          saturate(100%)
+          invert(55%)
+          sepia(98%)
+          saturate(1760%)
+          hue-rotate(334deg)
+          brightness(102%)
+          contrast(101%) !important;
+}
