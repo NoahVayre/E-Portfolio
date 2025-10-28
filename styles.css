@@ -202,9 +202,8 @@ button.btn.btn-outline-primary {
 
 
 /* ---------- navigation bar ---------- */
-/* ---------- navigation bar ---------- */
 section.navigation {
-  max-width: fit-content;
+  width: fit-content;
 }
 
 ul.nav.nav-pills {
@@ -214,47 +213,43 @@ ul.nav.nav-pills {
   width: 119px;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills {
-  color: var(--accent-color);
-  background-color: transparent;
+.nav-pills .nav-link {
+  position: relative;
+  color: var(--light-text-color);
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-.nav-link {
-  color: var(--light-text-color);
+/* Effet hover sur les liens */
+.nav-pills .nav-link:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px); /* Léger effet de soulèvement */
+}
+
+/* Style du lien actif */
+.nav-pills .nav-link.active {
+  color: var(--accent-color);
+  background-color: rgba(242, 102, 73, 0.1); /* Fond légèrement coloré */
+  font-weight: bold;
 }
 
 .nav a.nav-link {
   font-size: 34px;
   padding: 23px 0;
+  text-align: center;
 }
 
+/* Animation smooth au hover */
 .nav {
   padding: 38px 0;
   --bs-nav-link-hover-color: var(--accent-color);
   --bs-nav-link-active-color: var(--accent-color);
-
 }
 
-/* dropdown style  */
-.dropdown-item.active,
-.dropdown-item:active {
-  color: var(--body-text-color);
-  text-decoration: none;
-  background-color: var(--grey-color);
-}
-
-.bg-secondary {
-  --bs-bg-opacity: 1;
-  color: var(--secondary-color);
-  background-color: var(--light-text-color) !important;
-}
-
-
+/* Version responsive */
 @media only screen and (max-width: 1200px) {
-
   section.navigation {
-    z-index: 99999;
+    z-index: 9999;
   }
 
   ul.nav.text-center {
@@ -262,15 +257,26 @@ ul.nav.nav-pills {
     bottom: 0;
     right: 0;
     width: 100%;
-    z-index: 1000;
-    margin: 0px;
-    border-radius: 0px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    margin: 0;
+    border-radius: 20px 20px 0 0; /* Coins arrondis en haut seulement */
     display: flex;
-    padding: 0px;
+    padding: 15px 0;
     justify-content: space-evenly;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
   }
 
+  .nav-link {
+    padding: 10px 20px !important;
+  }
+
+  .nav a.nav-link {
+    font-size: 24px; /* Taille réduite pour mobile */
+    padding: 15px 0;
+  }
 }
+
 
 
 
