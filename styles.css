@@ -202,86 +202,75 @@ button.btn.btn-outline-primary {
 
 
 /* ---------- navigation bar ---------- */
+/* ---------- navigation bar ---------- */
 section.navigation {
-  width: fit-content;
-  transition: all 0.3s ease;
+  max-width: fit-content;
 }
 
 ul.nav.nav-pills {
-  background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
-  backdrop-filter: blur(10px); /* Effet de flou derrière la navbar */
+  background: #FFFFFF;
   display: grid;
   border-radius: 60px;
   width: 119px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre portée subtile */
-  padding: 10px 0;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
 }
 
-.nav-pills .nav-link {
-  position: relative;
+.nav-pills .nav-link.active,
+.nav-pills {
+  color: var(--accent-color);
+  background-color: transparent;
+}
+
+.nav-link {
   color: var(--light-text-color);
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-
-/* Effet hover sur les liens */
-.nav-pills .nav-link:hover {
-  color: var(--accent-color);
-  transform: translateY(-2px); /* Léger effet de soulèvement */
-}
-
-/* Style du lien actif */
-.nav-pills .nav-link.active {
-  color: var(--accent-color);
-  background-color: rgba(242, 102, 73, 0.1); /* Fond légèrement coloré */
-  font-weight: bold;
 }
 
 .nav a.nav-link {
   font-size: 34px;
   padding: 23px 0;
-  text-align: center;
 }
 
-/* Animation smooth au hover */
 .nav {
   padding: 38px 0;
   --bs-nav-link-hover-color: var(--accent-color);
   --bs-nav-link-active-color: var(--accent-color);
+
 }
 
-/* Version responsive */
+/* dropdown style  */
+.dropdown-item.active,
+.dropdown-item:active {
+  color: var(--body-text-color);
+  text-decoration: none;
+  background-color: var(--grey-color);
+}
+
+.bg-secondary {
+  --bs-bg-opacity: 1;
+  color: var(--secondary-color);
+  background-color: var(--light-text-color) !important;
+}
+
+
 @media only screen and (max-width: 1200px) {
+
   section.navigation {
-    z-index: 9999;
+    z-index: 99999;
   }
 
-  ul.nav.nav-pills.text-center {
+  ul.nav.text-center {
     position: fixed;
     bottom: 0;
     right: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    margin: 0;
-    border-radius: 20px 20px 0 0; /* Coins arrondis en haut seulement */
+    z-index: 1000;
+    margin: 0px;
+    border-radius: 0px;
     display: flex;
-    padding: 15px 0;
+    padding: 0px;
     justify-content: space-evenly;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
   }
 
-  .nav-link {
-    padding: 10px 20px !important;
-  }
-
-  .nav a.nav-link {
-    font-size: 24px; /* Taille réduite pour mobile */
-    padding: 15px 0;
-  }
 }
-
 
 
 
