@@ -203,7 +203,7 @@ button.btn.btn-outline-primary {
 
 /* ---------- navigation bar ---------- */
 section.navigation {
-  max-width: fit-content;
+  width: fit-content;
   transition: all 0.3s ease;
 }
 
@@ -257,7 +257,7 @@ ul.nav.nav-pills {
     z-index: 9999;
   }
 
-  ul.nav.text-center {
+  ul.nav.nav-pills.text-center {
     position: fixed;
     bottom: 0;
     right: 0;
