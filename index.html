@@ -257,6 +257,22 @@
                 <div class="container content-container">
                     <!-- ________________________________________________________________________________________________________________________________________________
                     -->    
+                    <section class="video-section">
+                    <h2>🎬 Présentation de mon projet</h2>
+                    <div class="video-container">
+                        <iframe 
+                        src="https://www.youtube.com/embed/VWGFQhc9wYI" 
+                        title="Présentation de mon projet"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </div>
+                    </section>
+
+
+
+
                     <section id="home" class="mt-0">   
                         <div id="index-content" class="content-section"></div>
                     </section> 
@@ -1164,36 +1180,36 @@
 
 
 <script>
-    const select = document.getElementById("langSelect");
-    const contentDiv = document.getElementById("content");
-let lang = localStorage.getItem("lang") || "fr";
-select.value = lang;
-select.addEventListener("change", () => {
-    lang = select.value;
-    localStorage.setItem("lang", lang);
-        loadPage(`index_${lang}.html`, "index-content");
-        loadPage(`about_${lang}.html`, "about-content");
-        loadPage(`engineering_${lang}.html`, "engineering-content");
-        loadPage(`civic_${lang}.html`, "civic-content");
-        loadPage(`career_${lang}.html`, "career-content");
-        loadPage(`mobility_${lang}.html`, "mobility-content");
-        loadPage(`activity_${lang}.html`, "activity-content");
-});
+        const select = document.getElementById("langSelect");
+        const contentDiv = document.getElementById("content");
+    let lang = localStorage.getItem("lang") || "fr";
+    select.value = lang;
+    select.addEventListener("change", () => {
+        lang = select.value;
+        localStorage.setItem("lang", lang);
+            loadPage(`index_${lang}.html`, "index-content");
+            loadPage(`about_${lang}.html`, "about-content");
+            loadPage(`engineering_${lang}.html`, "engineering-content");
+            loadPage(`civic_${lang}.html`, "civic-content");
+            loadPage(`career_${lang}.html`, "career-content");
+            loadPage(`mobility_${lang}.html`, "mobility-content");
+            loadPage(`activity_${lang}.html`, "activity-content");
+    });
 
-document.addEventListener("click", (event) => {
-    const target = event.target;
-    if (target.tagName === "A" && target.getAttribute("href").endsWith(".html")) {
-    event.preventDefault();
-    const page = target.getAttribute("href");
-        loadPage(`index_${lang}.html`, "index-content");
-        loadPage(`about_${lang}.html`, "about-content");
-        loadPage(`engineering_${lang}.html`, "engineering-content");
-        loadPage(`civic_${lang}.html`, "civic-content");
-        loadPage(`career_${lang}.html`, "career-content");
-        loadPage(`mobility_${lang}.html`, "mobility-content");
-        loadPage(`activity_${lang}.html`, "activity-content");
-    }
-});
+    document.addEventListener("click", (event) => {
+        const target = event.target;
+        if (target.tagName === "A" && target.getAttribute("href").endsWith(".html")) {
+        event.preventDefault();
+        const page = target.getAttribute("href");
+            loadPage(`index_${lang}.html`, "index-content");
+            loadPage(`about_${lang}.html`, "about-content");
+            loadPage(`engineering_${lang}.html`, "engineering-content");
+            loadPage(`civic_${lang}.html`, "civic-content");
+            loadPage(`career_${lang}.html`, "career-content");
+            loadPage(`mobility_${lang}.html`, "mobility-content");
+            loadPage(`activity_${lang}.html`, "activity-content");
+        }
+    });
 </script>
 
 
