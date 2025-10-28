@@ -231,11 +231,34 @@ ul.nav.nav-pills {
   transform: translateY(-2px); /* Léger effet de soulèvement */
 }
 
-/* Style du lien actif */
-.nav-pills .nav-link.active {
-  color: var(--accent-color);
-  background-color: rgba(242, 102, 73, 0.1); /* Fond légèrement coloré */
+section.navigation .nav-pills .nav-link.active::before {
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  to { transform: translate(-50%, -50%) scale(1.2); opacity: 0.3; }
+}
+
+section.navigation .nav-pills .nav-link.active {
+  position: relative;
+  filter: invert(54%) 
+        sepia(89%) 
+        saturate(510%) 
+        hue-rotate(337deg) 
+        brightness(97%) 
+        contrast(95%) !important;
+  color: var(--accent-color) !important;
+  background-color: rgba(242, 102, 73, 0.15) !important;
   font-weight: bold;
+
+  /* 🔹 Taille et forme */
+  border-radius: 60%!important;       /* rend le fond circulaire */
+  padding: 30px;            /* agrandit le cercle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(242, 102, 73, 0.3);
 }
 
 .nav a.nav-link {
@@ -265,7 +288,7 @@ ul.nav.nav-pills {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     margin: 0;
-    border-radius: 20px 20px 0 0; /* Coins arrondis en haut seulement */
+    border-radius: 20px 20px 0 0 !important; /* Coins arrondis en haut seulement */
     display: flex;
     padding: 15px 0;
     justify-content: space-evenly;
@@ -280,6 +303,7 @@ ul.nav.nav-pills {
     font-size: 24px; /* Taille réduite pour mobile */
     padding: 15px 0;
   }
+  
 }
 
 
