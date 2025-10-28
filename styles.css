@@ -204,13 +204,18 @@ button.btn.btn-outline-primary {
 /* ---------- navigation bar ---------- */
 section.navigation {
   width: fit-content;
+  transition: all 0.3s ease;
 }
 
 ul.nav.nav-pills {
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+  backdrop-filter: blur(10px); /* Effet de flou derrière la navbar */
   display: grid;
   border-radius: 60px;
   width: 119px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre portée subtile */
+  padding: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
 }
 
 .nav-pills .nav-link {
