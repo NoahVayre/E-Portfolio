@@ -202,37 +202,38 @@ button.btn.btn-outline-primary {
 
 
 /* ---------- navigation bar ---------- */
+/* ---------- NAVIGATION BAR ---------- */
+
 section.navigation {
   width: fit-content;
   transition: all 0.3s ease;
 }
 
+/* ---------- NAV CONTAINER ---------- */
+
 ul.nav.nav-pills {
   background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
-  backdrop-filter: blur(10px); /* Effet de flou derrière la navbar */
+  backdrop-filter: blur(10px); /* Effet de flou */
   display: grid;
   border-radius: 60px;
   width: 119px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre portée subtile */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/* ---------- LIENS ---------- */
 
 .nav-pills .nav-link {
   position: relative;
   color: var(--light-text-color);
+  text-align: center;
+  overflow: hidden;
   transition: all 0.3s ease;
-  overflow: hidden;
-  text-align: center;
 }
 
-.nav-pills .nav-link {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-}
+/* ---------- CONTENEUR D’ICÔNE ---------- */
 
-/* Conteneur d’icône (fonctionne pour img ou iconify) */
 .nav-pills .nav-link .nav-icon {
   display: flex;
   align-items: center;
@@ -247,7 +248,8 @@ ul.nav.nav-pills {
   opacity: 0.3;
 }
 
-/* Texte caché par défaut */
+/* ---------- TEXTE SURVOL ---------- */
+
 .nav-pills .nav-link .nav-text {
   position: absolute;
   top: 50%;
@@ -268,42 +270,56 @@ ul.nav.nav-pills {
   text-shadow: 0 0 10px rgba(242, 102, 73, 0.5);
 }
 
-
-/* Effet hover sur les liens */
+/* ---------- ÉTAT HOVER DU LIEN ---------- */
 .nav-pills .nav-link:hover {
   color: var(--accent-color);
-  transform: translateY(-2px); /* Léger effet de soulèvement */
+  transform: translateY(-2px);
 }
 
-section.navigation .nav-pills .nav-link.active::before {
-  animation: pulse 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes pulse {
-  from { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
-  to { transform: translate(-50%, -50%) scale(1.2); opacity: 0.3; }
-}
+/* ---------- ÉTAT ACTIF DU LIEN ---------- */
 
 section.navigation .nav-pills .nav-link.active {
   position: relative;
-  filter: invert(54%) 
-        sepia(89%) 
-        saturate(510%) 
-        hue-rotate(337deg) 
-        brightness(97%) 
-        contrast(95%) !important;
+  filter: invert(54%) sepia(89%) saturate(510%) hue-rotate(337deg)
+          brightness(97%) contrast(95%) !important;
   color: var(--accent-color) !important;
   background-color: rgba(242, 102, 73, 0.15) !important;
   font-weight: bold;
-
-  /* 🔹 Taille et forme */
-  border-radius: 60%!important;       /* rend le fond circulaire */
-  padding: 30px;            /* agrandit le cercle */
+  border-radius: 60% !important;
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 10px rgba(242, 102, 73, 0.3);
 }
+
+/* Animation de halo sur le lien actif */
+section.navigation .nav-pills .nav-link.active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: rgba(242, 102, 73, 0.2);
+  animation: pulse 1.5s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.3;
+  }
+}
+
+/* ---------- TAILLE DES ICÔNES ---------- */
 
 .nav a.nav-link {
   font-size: 34px;
@@ -311,14 +327,16 @@ section.navigation .nav-pills .nav-link.active {
   text-align: center;
 }
 
-/* Animation smooth au hover */
+/* ---------- RÉGLAGES GÉNÉRAUX ---------- */
+
 .nav {
   padding: 38px 0;
   --bs-nav-link-hover-color: var(--accent-color);
   --bs-nav-link-active-color: var(--accent-color);
 }
 
-/* Version responsive */
+/* ---------- RESPONSIVE ---------- */
+
 @media only screen and (max-width: 1200px) {
   section.navigation {
     z-index: 9999;
@@ -332,7 +350,7 @@ section.navigation .nav-pills .nav-link.active {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     margin: 0;
-    border-radius: 20px 20px 0 0 !important; /* Coins arrondis en haut seulement */
+    border-radius: 20px 20px 0 0 !important;
     display: flex;
     padding: 15px 0;
     justify-content: space-evenly;
@@ -344,11 +362,11 @@ section.navigation .nav-pills .nav-link.active {
   }
 
   .nav a.nav-link {
-    font-size: 24px; /* Taille réduite pour mobile */
+    font-size: 24px;
     padding: 15px 0;
   }
-  
 }
+
 
 
 
