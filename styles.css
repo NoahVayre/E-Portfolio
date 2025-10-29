@@ -226,7 +226,28 @@ ul.nav.nav-pills {
   text-align: center;
 }
 
-/* Le texte caché par défaut */
+.nav-pills .nav-link {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Conteneur d’icône (fonctionne pour img ou iconify) */
+.nav-pills .nav-link .nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Image ou icône : animation au survol */
+.nav-pills .nav-link:hover .nav-icon img,
+.nav-pills .nav-link:hover .nav-icon iconify-icon {
+  transform: scale(0.8);
+  opacity: 0.3;
+}
+
+/* Texte caché par défaut */
 .nav-pills .nav-link .nav-text {
   position: absolute;
   top: 50%;
@@ -237,21 +258,16 @@ ul.nav.nav-pills {
   font-size: 14px;
   opacity: 0;
   transition: all 0.3s ease;
-  pointer-events: none; /* pour éviter de bloquer le hover */
+  pointer-events: none;
 }
 
+/* Texte visible au survol */
 .nav-pills .nav-link:hover .nav-text {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+  text-shadow: 0 0 10px rgba(242, 102, 73, 0.5);
 }
 
-/* Effet hover : l'icône disparaît légèrement et le texte apparaît */
-.nav-pills .nav-link:hover iconify-icon,
-.nav-pills .nav-link:hover img {
-  transform: scale(0.8);
-  opacity: 0.3;
-  transition: all 0.3s ease;
-}
 
 /* Effet hover sur les liens */
 .nav-pills .nav-link:hover {
