@@ -203,14 +203,12 @@ button.btn.btn-outline-primary {
 
 /* ---------- navigation bar ---------- */
 /* ---------- NAVIGATION BAR ---------- */
-
 section.navigation {
   width: fit-content;
   transition: all 0.3s ease;
 }
 
 /* ---------- CONTAINER PRINCIPAL ---------- */
-
 ul.nav.nav-pills {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
@@ -223,7 +221,6 @@ ul.nav.nav-pills {
 }
 
 /* ---------- LIENS ---------- */
-
 .nav-pills .nav-link {
   position: relative;
   color: var(--light-text-color);
@@ -237,7 +234,6 @@ ul.nav.nav-pills {
 }
 
 /* ---------- ICÔNE ---------- */
-
 .nav-pills .nav-link .nav-icon {
   display: flex;
   align-items: center;
@@ -249,40 +245,18 @@ ul.nav.nav-pills {
   filter: grayscale(100%) brightness(70%) contrast(75%);
   display: inline-block;
   vertical-align: middle;
-  transition: filter 0.3s ease; /* Animation fluide lors du survol */
+  transition: filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 
-
-/* Au survol, applique un filtre qui donne une teinte orange */
-.nav-link:hover .icon-grey {
-  filter: invert(54%) 
-          sepia(89%) 
-          saturate(510%) 
-          hue-rotate(337deg) 
-          brightness(97%) 
-          contrast(95%) !important;
-}
-
-
-/* Animation sur icône ou image au survol */
-/* Animation sur icône ou image au survol */
-.nav-pills .nav-link:hover .nav-icon img,
-.nav-pills .nav-link:hover .nav-icon iconify-icon,
+/* Survol → teinte orange + légère animation */
 .nav-pills .nav-link:hover .icon-grey {
+  filter: invert(54%) sepia(89%) saturate(510%) hue-rotate(337deg)
+          brightness(97%) contrast(95%) !important;
   transform: scale(0.85);
   opacity: 0.4;
 }
 
-/* Texte visible au survol (icône OU image) */
-.nav-pills .nav-link:hover .nav-text,
-.nav-pills .nav-link:hover .icon-grey + .nav-text {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 /* ---------- TEXTE (au-dessous) ---------- */
-
 .nav-pills .nav-link .nav-text {
   color: var(--accent-color);
   font-weight: bold;
@@ -294,7 +268,7 @@ ul.nav.nav-pills {
   pointer-events: none;
 }
 
-/* Texte visible au survol (icône OU image) */
+/* Texte visible uniquement au survol de l’icône */
 .nav-pills .nav-link:hover .nav-text {
   opacity: 1;
   transform: translateY(0);
@@ -309,9 +283,10 @@ ul.nav.nav-pills {
 /* ---------- ÉTAT ACTIF AVEC HALO ANIMÉ ---------- */
 section.navigation .nav-pills .nav-link.active {
   position: relative;
-  color: var(--accent-color) !important;
+  filter: invert(54%) sepia(89%) saturate(510%) hue-rotate(337deg) brightness(97%) contrast(95%) !important;
+  color: var(--accent-color)!important;
   font-weight: bold;
-  background: none !important; /* suppression du fond statique */
+  background: none !important;
   box-shadow: none;
 }
 
@@ -319,7 +294,7 @@ section.navigation .nav-pills .nav-link.active {
 section.navigation .nav-pills .nav-link.active::before {
   content: "";
   position: absolute;
-  top: 10px; /* ajusté pour entourer l’icône, pas le texte */
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 65px;
@@ -343,7 +318,6 @@ section.navigation .nav-pills .nav-link.active::before {
 }
 
 /* ---------- AUTRES RÉGLAGES ---------- */
-
 .nav a.nav-link {
   font-size: 34px;
   padding: 20px 0;
@@ -357,7 +331,6 @@ section.navigation .nav-pills .nav-link.active::before {
 }
 
 /* ---------- VERSION MOBILE ---------- */
-
 @media only screen and (max-width: 1200px) {
   section.navigation {
     z-index: 9999;
