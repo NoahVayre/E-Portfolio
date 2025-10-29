@@ -223,6 +223,34 @@ ul.nav.nav-pills {
   color: var(--light-text-color);
   transition: all 0.3s ease;
   overflow: hidden;
+  text-align: center;
+}
+
+/* Le texte caché par défaut */
+.nav-pills .nav-link .nav-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none; /* pour éviter de bloquer le hover */
+}
+
+.nav-pills .nav-link:hover .nav-text {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Effet hover : l'icône disparaît légèrement et le texte apparaît */
+.nav-pills .nav-link:hover iconify-icon,
+.nav-pills .nav-link:hover img {
+  transform: scale(0.8);
+  opacity: 0.3;
+  transition: all 0.3s ease;
 }
 
 /* Effet hover sur les liens */
