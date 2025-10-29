@@ -209,11 +209,11 @@ section.navigation {
   transition: all 0.3s ease;
 }
 
-/* ---------- NAV CONTAINER ---------- */
+/* ---------- CONTAINER PRINCIPAL ---------- */
 
 ul.nav.nav-pills {
-  background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
-  backdrop-filter: blur(10px); /* Effet de flou */
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
   display: grid;
   border-radius: 60px;
   width: 119px;
@@ -230,9 +230,13 @@ ul.nav.nav-pills {
   text-align: center;
   overflow: hidden;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column; /* icône au-dessus du texte */
+  align-items: center;
+  justify-content: center;
 }
 
-/* ---------- CONTENEUR D’ICÔNE ---------- */
+/* ---------- ICÔNE ---------- */
 
 .nav-pills .nav-link .nav-icon {
   display: flex;
@@ -241,93 +245,81 @@ ul.nav.nav-pills {
   transition: all 0.3s ease;
 }
 
-/* Image ou icône : animation au survol */
+/* Animation sur icône ou image au survol */
 .nav-pills .nav-link:hover .nav-icon img,
 .nav-pills .nav-link:hover .nav-icon iconify-icon {
-  transform: scale(0.8);
-  opacity: 0.3;
+  transform: scale(0.85);
+  opacity: 0.4;
 }
 
-/* ---------- TEXTE SURVOL ---------- */
+/* ---------- TEXTE (au-dessous) ---------- */
 
 .nav-pills .nav-link .nav-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
   color: var(--accent-color);
   font-weight: bold;
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0;
+  transform: translateY(10px);
   transition: all 0.3s ease;
+  margin-top: 5px;
   pointer-events: none;
 }
 
-/* Texte visible au survol */
+/* Texte visible au survol (icône OU image) */
 .nav-pills .nav-link:hover .nav-text {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-  text-shadow: 0 0 10px rgba(242, 102, 73, 0.5);
+  transform: translateY(0);
 }
 
-/* ---------- ÉTAT HOVER DU LIEN ---------- */
+/* ---------- EFFET HOVER SUR LE LIEN ---------- */
 .nav-pills .nav-link:hover {
   color: var(--accent-color);
   transform: translateY(-2px);
 }
 
-/* ---------- ÉTAT ACTIF DU LIEN ---------- */
-
+/* ---------- ÉTAT ACTIF AVEC HALO ANIMÉ ---------- */
 section.navigation .nav-pills .nav-link.active {
   position: relative;
-  filter: invert(54%) sepia(89%) saturate(510%) hue-rotate(337deg)
-          brightness(97%) contrast(95%) !important;
   color: var(--accent-color) !important;
-  background-color: rgba(242, 102, 73, 0.15) !important;
   font-weight: bold;
-  border-radius: 60% !important;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 10px rgba(242, 102, 73, 0.3);
+  background: none !important; /* suppression du fond statique */
+  box-shadow: none;
 }
 
-/* Animation de halo sur le lien actif */
+/* Halo animé autour de l’icône active */
 section.navigation .nav-pills .nav-link.active::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 10px; /* ajusté pour entourer l’icône, pas le texte */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  background: rgba(242, 102, 73, 0.2);
+  background: rgba(242, 102, 73, 0.25);
   animation: pulse 1.5s ease-in-out infinite alternate;
   z-index: -1;
 }
 
+/* Animation du halo (effet respirant) */
 @keyframes pulse {
   from {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateX(-50%) scale(1);
     opacity: 0.6;
   }
   to {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translateX(-50%) scale(1.2);
     opacity: 0.3;
   }
 }
 
-/* ---------- TAILLE DES ICÔNES ---------- */
+/* ---------- AUTRES RÉGLAGES ---------- */
 
 .nav a.nav-link {
   font-size: 34px;
-  padding: 23px 0;
+  padding: 20px 0;
   text-align: center;
 }
-
-/* ---------- RÉGLAGES GÉNÉRAUX ---------- */
 
 .nav {
   padding: 38px 0;
@@ -335,7 +327,7 @@ section.navigation .nav-pills .nav-link.active::before {
   --bs-nav-link-active-color: var(--accent-color);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* ---------- VERSION MOBILE ---------- */
 
 @media only screen and (max-width: 1200px) {
   section.navigation {
