@@ -245,12 +245,41 @@ ul.nav.nav-pills {
   transition: all 0.3s ease;
 }
 
+.icon-grey {
+  filter: grayscale(100%) brightness(70%) contrast(75%);
+  display: inline-block;
+  vertical-align: middle;
+  transition: filter 0.3s ease; /* Animation fluide lors du survol */
+}
+
+
+/* Au survol, applique un filtre qui donne une teinte orange */
+.nav-link:hover .icon-grey {
+  filter: invert(54%) 
+          sepia(89%) 
+          saturate(510%) 
+          hue-rotate(337deg) 
+          brightness(97%) 
+          contrast(95%) !important;
+}
+
+
+/* Animation sur icône ou image au survol */
 /* Animation sur icône ou image au survol */
 .nav-pills .nav-link:hover .nav-icon img,
-.nav-pills .nav-link:hover .nav-icon iconify-icon {
+.nav-pills .nav-link:hover .nav-icon iconify-icon,
+.nav-pills .nav-link:hover .icon-grey {
   transform: scale(0.85);
   opacity: 0.4;
 }
+
+/* Texte visible au survol (icône OU image) */
+.nav-pills .nav-link:hover .nav-text,
+.nav-pills .nav-link:hover .icon-grey + .nav-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* ---------- TEXTE (au-dessous) ---------- */
 
@@ -925,23 +954,7 @@ team section style start
 
 
 
-.icon-grey {
-  filter: grayscale(100%) brightness(75%) contrast(75%);
-  display: inline-block;
-  vertical-align: middle;
-  transition: filter 0.3s ease; /* Animation fluide lors du survol */
-}
 
-
-/* Au survol, applique un filtre qui donne une teinte orange */
-.nav-link:hover .icon-grey {
-  filter: invert(54%) 
-          sepia(89%) 
-          saturate(510%) 
-          hue-rotate(337deg) 
-          brightness(97%) 
-          contrast(95%) !important;
-}
 
 
 /* Accentuation vers un gris plus foncé au survol */
