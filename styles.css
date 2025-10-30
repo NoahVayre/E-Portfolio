@@ -256,7 +256,7 @@ ul.nav.nav-pills {
           hue-rotate(337deg) 
           brightness(97%) 
           contrast(95%) !important;
-  transform: scale(0.9);
+  transform: scale(0.95);
   transform: translateY(-2px);
   opacity: 0.8;
 }
@@ -282,7 +282,7 @@ ul.nav.nav-pills {
 /* ---------- EFFET HOVER SUR LE LIEN ---------- */
 .nav-pills .nav-link:hover {
   color: var(--accent-color);
-  transform: translateY(-2px) scale(0.9);
+  transform: translateY(-2px) scale(0.95);
   opacity: 0.8;
 }
 
