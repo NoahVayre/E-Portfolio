@@ -277,7 +277,7 @@ ul.nav.nav-pills {
 .nav-pills .nav-link:hover .nav-text {
   opacity: 1;
   transform: translateY(0);
-}
+}   
 
 /* ---------- EFFET HOVER SUR LE LIEN ---------- */
 .nav-pills .nav-link:hover {
