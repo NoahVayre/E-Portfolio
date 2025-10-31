@@ -457,6 +457,30 @@ section#home {
   padding: 300px 0px;
 }
 
+section#engineering{
+  padding: 200px 0px;
+  }
+
+section#mobility{
+  padding: 200px 0px;
+  }
+
+section#civic{
+  padding: 200px 0px;
+  }
+
+section#activity{
+  padding: 200px 0px;
+  }
+
+section#career{
+  padding: 200px 0px;
+  }
+
+section#about{
+  padding: 200px 0px;
+  }
+
 
 @media only screen and (max-width: 1200px) {
 
@@ -464,6 +488,29 @@ section#home {
     padding: 230px 0px;
   }
 
+  section#engineering{
+  padding: 130px 0px;
+  }
+
+  section#mobility{
+  padding: 130px 0px;
+  }
+
+  section#civic{
+  padding: 130px 0px;
+  }
+
+  section#activity{
+  padding: 130px 0px;
+  }
+
+  section#career{
+  padding: 130px 0px;
+  }
+
+  section#about{
+  padding: 130px 0px;
+  }
 }
 
 
