@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="js/modernizr.js"></script>
   <script src="js/load.js"></script>
-  <script src="js/progressbars.js"></script>
+
 
   
 
@@ -41,7 +41,6 @@
     loadPage(`activity_${lang}.html`, "activity-content");
     loadPage(`career_${lang}.html`, "career-content");
     loadPage(`about_${lang}.html`, "about-content");
-    initializeProgressBars();
   });
 </script>
 
@@ -582,6 +581,25 @@
                         <div id="engineering-content" class="content-section"></div>
                         </div>
                     </section>
+                        <div class="py-4 my-4 ">
+                            <h2 class="fw-bold pb-4 text-center">Skills</h2>
+
+                            <div id="progressbar-tooltip-id" class="progressbar-tooltip">
+
+                    
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="60" data-title="Modélisation 3D"></div>
+                                    
+                               
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="90" data-title="Management"></div>
+                                    
+                               
+                                <div class="ab-progress progress-tooltip" data-progress data-tooltip="true"
+                                    data-value="70" data-title="Programmation"></div>
+                                    
+                            </div>
+                        </div>
 
                     <section id="mobility" class="mt-0 text-center">
                         <div class=" py-lg-4 my-lg-4">
@@ -1233,7 +1251,6 @@
             loadPage(`career_${lang}.html`, "career-content");
             loadPage(`mobility_${lang}.html`, "mobility-content");
             loadPage(`activity_${lang}.html`, "activity-content");
-            initializeProgressBars();
     });
 
     document.addEventListener("click", (event) => {
