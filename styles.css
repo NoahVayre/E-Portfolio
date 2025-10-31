@@ -981,3 +981,28 @@ team section style start
   border: none;
   border-radius: 12px;
 }
+
+
+
+/* Style par défaut des liens */
+a {
+    color: #FF5733; /* Orange vif pour le texte du lien */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.3s ease-in-out; /* Animation douce pour la couleur */
+}
+
+/* Style des liens visités (facultatif) */
+a:visited {
+    color: #C70039; /* Un orange-rouge plus profond ou bordeaux */
+}
+
+/* Style au survol (hover) */
+a:hover {
+    color: #FFC300; /* Jaune-orangé plus clair pour l'effet de survol */
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+/* Style lorsqu'on clique sur le lien (active) */
+a:active {
+    color: #DA9900; /* Une nuance d'or plus sombre pour le clic */
+}
