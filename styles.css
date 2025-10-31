@@ -28,7 +28,7 @@ body {
   font-size: 19px;
   line-height: 1.6em;
   color: var(--body-text-color);
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color)!important;
 }
 
 h1,
@@ -48,7 +48,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 70px;
+  font-size: 60px;
   font-family: 'Inter', sans-serif;
 
 }
@@ -300,7 +300,7 @@ section.navigation .nav-pills .nav-link.active {
 section.navigation .nav-pills .nav-link.active::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 50%;
   transform: translateX(-50%);
   width: 65px;
@@ -326,7 +326,7 @@ section.navigation .nav-pills .nav-link.active::before {
 /* ---------- AUTRES RÉGLAGES ---------- */
 .nav a.nav-link {
   font-size: 34px;
-  padding: 20px 0;
+  padding: 12px 0;
   text-align: center;
 }
 
@@ -807,9 +807,6 @@ iconify-icon.quote {
 /*--------------------------------------------------------------
 team section style start
 --------------------------------------------------------------*/
-.heading-color {
-  color: var(--accent-color);
-}
 
 
 .content-section {
