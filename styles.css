@@ -602,6 +602,8 @@ div#progressbar-tooltip-id {
   height: var(--progressbar-height, 6px);
   background: var(--accent-color);
   border-radius: var(--progressbar-radius, 6px);
+  transition: width 1.5s ease-out; /* Ajout d'une transition pour l'animation */
+  width: 0%; /* Démarre à 0% et le JS le changera à la valeur data-value */
 }
 
 .ab-progress .progress-indicator-inner {
@@ -618,6 +620,8 @@ div#progressbar-tooltip-id {
 .ab-progress .down-arrow {
   border-top: 0px solid var(--progress-indicator-background, var(--clr-dark));
 }
+
+
 
 
 @media only screen and (max-width: 580px) {
