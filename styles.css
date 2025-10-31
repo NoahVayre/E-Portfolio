@@ -813,11 +813,11 @@ team section style start
 
 
 .content-section {
-  margin-bottom: 50px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  margin-bottom: 50px; /* Conserver l'espace entre les sections */
+  padding: 0; /* Retirer le padding interne. Laissez Bootstrap gérer cela */
+  border: none; /* Supprimer la bordure */
+  border-radius: 0; /* Supprimer les coins arrondis */
+  background-color: transparent; /* Utiliser le fond du body (uni) */
 }
 
 
