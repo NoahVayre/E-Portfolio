@@ -15,7 +15,7 @@ function loadPage(page, containerId) {
     })
     .then(html => { 
       container.innerHTML = html; // Insère le contenu HTML dans le conteneur
-      //window.scrollTo(0, 0); // Remonter en haut après chargement
+      window.scrollTo(0, 0); // Remonter en haut après chargement
       
     })
     .catch(error => {
