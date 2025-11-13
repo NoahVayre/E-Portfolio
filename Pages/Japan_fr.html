@@ -1,85 +1,266 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Japan — E-Portfolio</title>
-
-    <!-- Link to project stylesheet (adjust path to your project's styles) -->
-    <link rel="stylesheet" href="../styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon E-portfolio : Séjour Linguistique et Stage au Japon (ENSEEIHT)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bs-primary: #5D4037; /* Marron foncé (Dark Brown) */
+            --bs-secondary: #F26649; /* Orange Corail (Coral Orange) */
+            --bs-light-brown: #EFEBE9; /* Marron très clair pour le fond des sections */
+        }
+        body {
+            font-family: 'Georgia', serif; /* Police classique pour un look épuré */
+            color: var(--bs-primary);
+        }
+        .hero-section {
+            background: linear-gradient(rgba(93, 64, 55, 0.7), rgba(93, 64, 55, 0.7)), url('https://images.unsplash.com/photo-1549488344-0c159f80735f?fit=crop&w=1500&q=80') no-repeat center center; /* Image de Yokohama avec un filtre marron foncé */
+            background-size: cover;
+            color: white;
+            padding: 120px 0;
+            text-shadow: 1px 1px 2px #000000;
+        }
+        .section-heading {
+            color: var(--bs-secondary);
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--bs-primary);
+            padding-bottom: 8px;
+            margin-bottom: 40px;
+        }
+        .card-custom {
+            border: 1px solid var(--bs-light-brown);
+            border-left: 5px solid var(--bs-secondary); /* Accent Orange */
+            border-radius: 0; /* Angles droits pour un look plus moderne */
+            box-shadow: none; /* Épure le style */
+            transition: border-left 0.3s ease-in-out;
+        }
+        .card-custom:hover {
+            border-left: 5px solid var(--bs-primary);
+        }
+        .list-group-item {
+            border-color: var(--bs-light-brown);
+        }
+        .btn-custom {
+            background-color: var(--bs-secondary);
+            border-color: var(--bs-secondary);
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        .accordion-button:not(.collapsed) {
+            color: var(--bs-secondary);
+            background-color: var(--bs-light-brown);
+        }
+        .bg-section-light {
+            background-color: var(--bs-light-brown);
+        }
+        .text-secondary-custom {
+            color: var(--bs-secondary) !important;
+        }
+    </style>
 </head>
-<body class="page page--japan">
-    <header class="site-header">
-        <div class="container">
-            <a class="brand" href="/index.html">E-Portfolio</a>
+<body>
+
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Immersion Professionnelle & Culturelle au Japon</h1>
+            <p class="lead mt-3">Séjour linguistique et stage ouvrier (ENSEEIHT / Intercultural Society for the Arts)</p>
+            <a href="#apercu" class="btn btn-custom btn-lg mt-4 text-white">Découvrir le Projet</a>
         </div>
     </header>
 
-    <main>
-        <section class="hero hero--japan">
-            <div class="container">
-                <h1 class="hero__title">Discover Japan</h1>
-                <p class="hero__subtitle">A concise guide to culture, travel, and food.</p>
-            </div>
-        </section>
-
-        <section class="container section section--overview" id="overview">
-            <h2 class="section__title">Overview</h2>
-            <p class="lead">Japan is an island nation in East Asia known for its blend of ancient tradition and cutting-edge modernity. From tranquil temples and cherry blossom seasons to bustling cityscapes and innovative cuisine, Japan offers diverse experiences for every traveler.</p>
-        </section>
-
-        <section class="container grid grid--3 section--cards" id="highlights">
-            <article class="card">
-                <h3 class="card__title">Culture</h3>
-                <p class="card__text">Respect, craftsmanship, and seasonal celebrations shape everyday life. Key experiences include visiting shrines and participating in festivals.</p>
-            </article>
-
-            <article class="card">
-                <h3 class="card__title">Cuisine</h3>
-                <p class="card__text">From sushi and ramen to local street food, Japanese cuisine emphasizes fresh ingredients, balance, and presentation.</p>
-            </article>
-
-            <article class="card">
-                <h3 class="card__title">Travel Tips</h3>
-                <p class="card__text">Use public transport (trains are punctual), carry cash for small shops, and learn basic courtesy phrases to enrich interactions.</p>
-            </article>
-        </section>
-
-        <section class="container section section--gallery" id="gallery">
-            <h2 class="section__title">Gallery</h2>
-            <div class="grid grid--3">
-                <figure class="photo">
-                    <img src="/assets/images/japan-kyoto.jpg" alt="Traditional street in Kyoto" loading="lazy" />
-                    <figcaption>Kyoto — historic streets and temples</figcaption>
-                </figure>
-
-                <figure class="photo">
-                    <img src="/assets/images/japan-mt-fuji.jpg" alt="Mount Fuji overview" loading="lazy" />
-                    <figcaption>Mount Fuji — iconic peak</figcaption>
-                </figure>
-
-                <figure class="photo">
-                    <img src="/assets/images/japan-tokyo.jpg" alt="Night view of Tokyo" loading="lazy" />
-                    <figcaption>Tokyo — neon-lit city life</figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section class="container section section--resources" id="resources">
-            <h2 class="section__title">Quick Resources</h2>
-            <ul class="list">
-                <li>JR Pass information — efficient rail travel</li>
-                <li>Etiquette basics — removing shoes, bowing, polite speech</li>
-                <li>Season guide — best times: cherry blossom (spring), autumn foliage (fall)</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer class="site-footer">
+    <section id="apercu" class="py-5 bg-section-light">
         <div class="container">
-            <p class="muted">© 2025 E-Portfolio — Japan Guide</p>
-            <p class="muted"><a href="/Pages/Privacy_en.html">Privacy</a> · <a href="/Pages/Terms_en.html">Terms</a></p>
+            <h2 class="section-heading text-center">📅 Aperçu Global du Voyage</h2>
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 card-custom">
+                        <div class="card-body">
+                            <h3 class="card-title text-secondary-custom">Durée Totale</h3>
+                            <p class="fs-4 fw-bold">7 Semaines</p>
+                            [cite_start]<p class="card-text text-muted">3 semaines d'apprentissage à Yokohama [cite: 490] + [cite_start]4 semaines de stage[cite: 490].</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-custom">
+                        <div class="card-body">
+                            <h3 class="card-title text-secondary-custom">Dates Estimées</h3>
+                            <p class="fs-4 fw-bold">Juillet - Août 2026</p>
+                            [cite_start]<p class="card-text text-muted">Exemple 2025/2026 : Du 6 au 26 juillet (Séjour) [cite: 505, 506] [cite_start]et du 27 juillet au 22 août (Stage)[cite: 509, 510].</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-custom">
+                        <div class="card-body">
+                            <h3 class="card-title text-secondary-custom">Coût (Hors Avion)</h3>
+                            <p class="fs-4 fw-bold">171 000 JPY (env. 1000 €)</p>
+                            [cite_start]<p class="card-text text-muted">Inclut cours, hébergement (Hostel Zen [cite: 501][cite_start]), et activités culturelles[cite: 495, 501]. [cite_start]Budget total recommandé : **environ 3000 €**[cite: 15].</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section id="programme" class="py-5">
+        <div class="container">
+            <h2 class="section-heading text-center">📚 Programme d'Études et de Stage</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 p-4 card-custom">
+                        <h4 class="text-secondary-custom mb-3">Séjour Linguistique et Culturel (Yokohama)</h4>
+                        <p class="fw-bold">Lieu :</p>
+                        [cite_start]<p class="text-muted">Kanagawa Kenmin Center, Yokohama[cite: 344]. [cite_start]Le centre est à 5 minutes à pied de la gare JR-Yokohama[cite: 370].</p>
+                        <p class="fw-bold">Activités Culturelles (Exemples) :</p>
+                        <ul class="list-group list-group-flush">
+                            [cite_start]<li class="list-group-item bg-transparent border-0">Workshops chez Mme Kano (Kimono, Shodo, Cérémonie du Thé, Arts martiaux)[cite: 389, 391].</li>
+                            [cite_start]<li class="list-group-item bg-transparent border-0">Workshop de Shogi (jeu d'échecs japonais) près de la gare de Yokohama[cite: 309, 403].</li>
+                            [cite_start]<li class="list-group-item bg-transparent border-0">Visites d'entreprises/écoles : SUGINO Fashion College [cite: 405] [cite_start]et EXOTEC[cite: 309, 430, 431, 462].</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 p-4 card-custom">
+                        <h4 class="text-secondary-custom mb-3">Stage Ouvrier et Immersion (4 Semaines)</h4>
+                        <p class="fw-bold">Domaine :</p>
+                        [cite_start]<p class="text-muted">Hôtellerie ou Restauration[cite: 476]. [cite_start]Nécessite d'apporter un pantalon noir et des chaussures noires[cite: 151].</p>
+                        <p class="fw-bold">Philosophie de Comportement :</p>
+                        [cite_start]<p class="text-muted">Adopter une posture de **Professionnalisme** [cite: 309][cite_start], faire preuve de Réactivité et Proactivité[cite: 309]. [cite_start]La communication de base avec le supérieur est essentielle : rapporter, transmettre et consulter[cite: 309].</p>
+                        <p class="fw-bold">Indemnisation :</p>
+                        [cite_start]<p class="text-danger">Le visa touriste interdit toute réception d'argent[cite: 514]. Le stage n'est pas rémunéré. [cite_start]Les entreprises peuvent offrir un surplus pour couvrir les frais de transport et pension complète[cite: 513, 516].</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preparation" class="py-5 bg-section-light">
+        <div class="container">
+            <h2 class="section-heading text-center">✅ Préparation et Logistique Clés</h2>
+
+            <div class="accordion accordion-flush" id="accordionPrep">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <span class="text-secondary-custom me-2">1.</span> Démarches Administratives (Passeport, VISA, Convention)
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionPrep">
+                        <div class="accordion-body">
+                            <ul>
+                                [cite_start]<li>**Passeport :** S'en procurer un et vérifier sa validité (doit être valide pendant l'été)[cite: 35, 521].</li>
+                                <li>**VISA (Non-Européens) :** Faire la demande à l'ambassade. [cite_start]Évoquer uniquement le motif de **"voyage touristique"** ou **"séjour linguistique"**[cite: 39, 519]. [cite_start]Ne parlez pas de stage ou de rémunération[cite: 39, 519].</li>
+                                [cite_start]<li>**Convention de Stage :** Créer et remplir la convention sur Eudonet avant le départ[cite: 41].</li>
+                                [cite_start]<li>**Arrivée au Japon :** Utiliser le site **Visit Japan Web** pour simplifier la procédure d'immigration et la douane (toujours déclarer le motif touristique)[cite: 122, 310].</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <span class="text-secondary-custom me-2">2.</span> Informations de Paiement (Dates & Coordonnées)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPrep">
+                        <div class="accordion-body">
+                            [cite_start]<p><strong>Date Limite :</strong> Le 31 mai (Paiement final)[cite: 24, 308].</p>
+                            [cite_start]<p><strong>Montant :</strong> 161 000 JPY / personne + 5000 JPY de frais de banque japonaise **par virement**[cite: 308].</p>
+                            <p class="fw-bold">Conseil :</p>
+                            <ul>
+                                [cite_start]<li>Payer en groupe (au moins 5 personnes) pour réduire les frais de virement[cite: 29, 287].</li>
+                                [cite_start]<li>Faire le virement directement depuis votre banque (éviter Wise/Western Unions)[cite: 30, 31, 297].</li>
+                            </ul>
+                            <p class="fw-bold mt-2">Coordonnées Bancaires de l'Association "Intercultural Society for the Arts" :</p>
+                            <ul>
+                                [cite_start]<li>**Nom du Bénéficiaire :** INTERCULTURAL SOCIETY FOR THE ARTS[cite: 294].</li>
+                                <li>**Banque Bénéficiaire :** The BANK OF MITSUBISHI UFJ, LTD. (=MUFG) [cite_start][cite: 290].</li>
+                                [cite_start]<li>**Code SWIFT/BIC :** BOTKJPJT[cite: 292].</li>
+                                [cite_start]<li>**Numéro de Compte :** 0096199[cite: 295].</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span class="text-secondary-custom me-2">3.</span> Logistique Quotidienne et Culturelle
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionPrep">
+                        <div class="accordion-body">
+                            <p class="fw-bold">À prévoir pour le voyage :</p>
+                            <ul>
+                                [cite_start]<li>**Adaptateur :** Les prises sont différentes (type $A/B$, 100 V)[cite: 147]. </li>
+                                [cite_start]<li>**Transport (Tokyo/Japon) :** Acheter la carte **SUICA ou PASMO** à l'aéroport (recharge en CASH)[cite: 179, 180, 182]. [cite_start]Elle est utilisable dans les *konbini* et distributeurs[cite: 181]. [cite_start]Google Maps est très efficace pour se déplacer[cite: 162, 166, 185].</li>
+                                <li>**Hydratation :** Prendre une gourde. [cite_start]Utiliser l'application **Mymizu** pour trouver la fontaine la plus proche (il fait chaud et moite)[cite: 170, 172].</li>
+                                [cite_start]<li>**Alertes :** Installer l'application **NHK WORLD-JAPAN** pour être notifié en cas de séismes ou de typhons (à partir de mi-août)[cite: 174, 175].</li>
+                            </ul>
+                            <p class="fw-bold mt-3">Règles Culturelles Essentielles :</p>
+                            <ul>
+                                [cite_start]<li>**Pourboire :** Il n'y en a pas au Japon[cite: 127].</li>
+                                [cite_start]<li>**Nourriture :** Manger ou boire en marchant est mal vu ; il est préférable de s'arrêter[cite: 141].</li>
+                                <li>**Tabac :** Il est mal perçu de fumer en marchant dans la rue. [cite_start]Utiliser les espaces dédiés (*smoking places*)[cite: 136, 137].</li>
+                                [cite_start]<li>**Déchets :** Conserver les détritus jusqu'à l'hôtel (peu de poubelles dans la rue)[cite: 130, 132].</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-heading text-center">✨ Mon Expérience et Réalisations (Post-Séjour)</h2>
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h3 class="text-secondary-custom border-bottom pb-2 mb-3">Portfolio Média : Moments Clés</h3>
+                    <p class="lead text-muted text-center">*Espace réservé pour mes meilleures photos/vidéos du voyage, du stage, et des activités culturelles.</p>
+                    <div class="border p-5 text-center bg-section-light">
+                        
+                        <h4 class="mt-3">Galerie et Témoignages Visuels (À insérer ici)</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <h3 class="text-secondary-custom border-bottom pb-2">Bilan du Séjour Linguistique</h3>
+                    <div class="card card-custom p-4">
+                        <p class="fw-bold">Progression en Japonais :</p>
+                        <p class="fst-italic text-muted">Détaillez vos progrès en langue, les méthodes d'apprentissage qui ont fonctionné, et comment la pratique quotidienne a dépassé l'enseignement en classe.</p>
+                        <hr>
+                        <p class="fw-bold">Réflexion Culturelle :</p>
+                        <p class="fst-italic text-muted">Analyse des workshops (Kimono, Shodo, Shogi) et de la visite d'entreprise (EXOTEC), mettant en lumière votre compréhension de la culture d'entreprise japonaise.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <h3 class="text-secondary-custom border-bottom pb-2">Impact Professionnel du Stage</h3>
+                    <div class="card card-custom p-4">
+                        <p class="fw-bold">Développement des Soft Skills :</p>
+                        [cite_start]<p class="fst-italic text-muted">Illustrez des situations où vous avez dû faire preuve de "réactivité" et de "proactivité" [cite: 309] (même en l'absence de rémunération)[cite_start], et comment vous avez réussi à "communiquer de base avec le supérieur"[cite: 309].</p>
+                        <hr>
+                        <p class="fw-bold">Défis et Solutions :</p>
+                        <p class="fst-italic text-muted">Décrivez le plus grand défi du stage et les solutions que vous avez mises en œuvre pour l'excellence opérationnelle. (Exemple : tri des déchets, gestion client, etc.)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4" style="background-color: var(--bs-primary) !important;">
+        <p class="m-0">&copy; 2025 Mon E-portfolio Japon | ENSEEIHT</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
