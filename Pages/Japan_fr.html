@@ -7,21 +7,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
-            --bs-primary: #5D4037; /* Marron foncé (Dark Brown) */
-            --bs-secondary: #F26649; /* Orange Corail (Coral Orange) */
-            --bs-light-brown: #EFEBE9; /* Marron très clair pour le fond des sections */
-        }
+        --bs-primary: #5D4037; /* Marron foncé */
+        --bs-secondary: #F26649; /* Orange Corail */
+        --bs-light-brown: #EFEBE9; /* Marron très clair */
+    }
+    /* Ajoutez ceci au CSS global */
+.card-custom img {
+    border-radius: 0.25rem; /* Arrondir les coins de l'image */
+    object-fit: cover; /* S'assurer que l'image couvre l'espace sans distorsion */
+    width: 100%; /* L'image prend toute la largeur de la carte */
+    height: auto;
+
+}
         body {
             font-family: 'Georgia', serif; /* Police classique pour un look épuré */
             color: var(--bs-primary);
         }
         .hero-section {
-            background: linear-gradient(rgba(93, 64, 55, 0.7), rgba(93, 64, 55, 0.7)), url('https://images.unsplash.com/photo-1549488344-0c159f80735f?fit=crop&w=1500&q=80') no-repeat center center; /* Image de Yokohama avec un filtre marron foncé */
-            background-size: cover;
-            color: white;
-            padding: 120px 0;
-            text-shadow: 1px 1px 2px #000000;
-        }
+        /* Changement de l'image de fond pour un style plus "Japonais" */
+        background: linear-gradient(rgba(93, 64, 55, 0.7), rgba(93, 64, 55, 0.7)), 
+                    url('https://cdn.artphotolimited.com/images/5dca98b2bd40b8720ecc2c73/300x300/fujiyoshida-chureito-pagoda.jpg') no-repeat center center; /* Exemple d'image : Mont Fuji ou Pagode */
+        background-size: cover;
+        color: white;
+        padding: 180px 0; /* Plus de padding pour un effet "grand écran" */
+        text-shadow: 1px 1px 4px #000000;
+        min-height: 100vh; /* Assure que la section prend une grande partie de la hauteur */
+        display: flex;
+        align-items: center;
+    }
+    .btn-custom {
+        /* Le bouton est un peu plus grand pour l'impact */
+        background-color: var(--bs-secondary);
+        border-color: var(--bs-secondary);
+        color: white;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        transition: background-color 0.3s;
+    }
+    .btn-custom:hover {
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+    }
         .section-heading {
             color: var(--bs-secondary);
             font-weight: 700;
@@ -30,28 +56,35 @@
             padding-bottom: 8px;
             margin-bottom: 40px;
         }
-        .card-custom {
-            border: 1px solid var(--bs-light-brown);
-            border-left: 5px solid var(--bs-secondary); /* Accent Orange */
-            border-radius: 0; /* Angles droits pour un look plus moderne */
-            box-shadow: none; /* Épure le style */
-            transition: border-left 0.3s ease-in-out;
-        }
-        .card-custom:hover {
-            border-left: 5px solid var(--bs-primary);
-        }
+            /* Modifiez ou ajoutez cette section dans votre balise <style> */
+    .card-custom {
+        /* Styles existants pour l'état normal */
+        border: 1px solid var(--bs-light-brown);
+        border-left: 5px solid var(--bs-secondary); 
+        border-radius: 0; 
+        box-shadow: none; 
+        
+        /* NOUVEAU : Rend les mouvements fluides */
+        transition: all 0.3s ease-in-out; 
+        cursor: pointer; /* Confirme que la carte est cliquable */
+    }
+
+    /* NOUVEAU : Effet de survol (Hover) */
+    .card-custom:hover {
+        /* Soulève la carte de 5 pixels vers le haut */
+        transform: translateY(-5px); 
+        
+        /* Ajoute une ombre subtile pour l'effet de lévitation */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
+        
+        /* Optionnel : Assurez que la bordure reste orange au survol */
+        border-left: 5px solid var(--bs-primary);
+    }
+            
         .list-group-item {
             border-color: var(--bs-light-brown);
         }
-        .btn-custom {
-            background-color: var(--bs-secondary);
-            border-color: var(--bs-secondary);
-            color: white;
-        }
-        .btn-custom:hover {
-            background-color: var(--bs-primary);
-            border-color: var(--bs-primary);
-        }
+        
         .accordion-button:not(.collapsed) {
             color: var(--bs-secondary);
             background-color: var(--bs-light-brown);
@@ -64,21 +97,190 @@
         }
     </style>
 </head>
-<body>
+<body>    
 
-    <header class="hero-section">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold">Immersion Professionnelle & Culturelle au Japon</h1>
-            <p class="lead mt-3">Séjour linguistique et stage ouvrier (ENSEEIHT / Intercultural Society for the Arts)</p>
-            <a href="#apercu" class="btn btn-custom btn-lg mt-4 text-white">Découvrir le Projet</a>
+<header class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-1 fw-bolder mb-3" style="letter-spacing: 5px;">JAPON</h1>
+        
+        <h2 class="display-6 fw-light mb-5 text-uppercase">
+            日本 - にほん
+        </h2>
+
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+            
+            <a href="#cours" class="btn btn-custom btn-lg text-white" style="color: white; border-color: white;">
+                <i class="bi bi-book me-2"></i> Apprendre le Japonais à l'ENSEEIHT
+            </a>
+            
+            <a href="#apercu" class="btn btn-custom btn-lg text-white" style="color: white; border-color: white;">
+                <i class="bi bi-book me-2"></i> Séjour Linguistique et Stage Ouvrier
+            </a>
+            
         </div>
-    </header>
+        
+    </div>
+</header>
 
+
+<section id="cours" class="py-5 bg-section-light">
+    <div class="container">
+        <h2 class="section-heading text-center">Apprendre le Japonais</h2>
+
+        <p class="lead text-muted text-center mb-5">
+            Préparer l'immersion au Japon exige une double approche : la rigueur des cours académiques pour les fondations grammaticales et une forte autonomie pour l'approfondissement lexical et l'immersion numérique.
+        </p>
+
+        <div class="row justify-content-center g-4">
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 p-3 card-custom text-center cursor-pointer" 
+                     data-bs-toggle="modal" data-bs-target="#modalAcademic">
+                    <div class="card-body">
+                        <i class="bi bi-mortarboard display-4 text-secondary-custom mb-3"></i>
+                        <h4 class="card-title fw-bold text-secondary-custom">Les Fondations : Cours à l'ENSEEIHT</h4>
+                        <hr class="w-50 mx-auto border-secondary">
+                        <p class="card-text text-start">
+                            <i class="bi bi-search me-1 text-secondary-custom"></i> Cliquez pour explorer les objectifs d'apprentissage des scripts (Hiragana, Katakana) et des tournures de phrases essentielles...
+                        </p>
+                    </div>
+                    <img src="https://www.japan-experience.com/sites/default/files/styles/scale_crop_480x250/public/legacy/japan_experience/1493028585211.jpg.webp?itok=LvWU4toC" 
+             class="mt-3 img-fluid" 
+             alt="Étudiants apprenant l'écriture japonaise">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 p-3 card-custom text-center cursor-pointer" 
+                     data-bs-toggle="modal" data-bs-target="#modalAutonomy">
+                    <div class="card-body">
+                        <i class="bi bi-phone-vibrate-fill display-4 text-secondary-custom mb-3"></i>
+                        <h4 class="card-title fw-bold text-secondary-custom">Autonomie : Approfondissement Personnel</h4>
+                        <hr class="w-50 mx-auto border-secondary">
+                        <p class="card-text text-start">
+                            <i class="bi bi-search me-1 text-secondary-custom"></i> Cliquez pour voir la méthodologie autodidacte, l'utilisation des applications (Anki, VoiceTra) et l'immersion auditive...
+                        </p>
+                    </div>
+                    <img src="https://www.cc-paysdepontchateau.fr/medias/2023/02/Nume%CC%81rique-ordinateur-tablette-te%CC%81le%CC%81phone-humain-re%CC%81seaux-communication-connexion-multime%CC%81dia-internet-ecran-%C2%A9AdobeStock-scaled.jpeg"
+             class="mt-3 img-fluid " 
+             alt="Étudiants apprenant l'écriture japonaise">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="modalAcademic" tabindex="-1" aria-labelledby="modalAcademicLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: var(--bs-primary); color: white;">
+        <h5 class="modal-title fw-bold" id="modalAcademicLabel"><i class="bi bi-mortarboard me-2"></i> Les Fondations : Cours à l'ENSEEIHT</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="fw-bold text-secondary-custom">Rigueur et Acquisition des Structures :</p>
+        <p>
+            Les cours de japonais à l'ENSEEIHT constituent la base structurée de mon apprentissage. Cette rigueur académique est indispensable pour comprendre les nuances culturelles et linguistiques qui seront mises en pratique durant le séjour.
+        </p>
+        <h6 class="fw-bold mt-3 text-primary">Contenu d'Apprentissage Clé :</h6>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="fw-bold mb-1"><i class="bi bi-alphabet me-1"></i> Scripts & Alphabet :</p>
+                <ul class="list-unstyled small ms-3">
+                    <li>**Maîtrise Complète :** Acquisition rapide et rigoureuse des syllabaires fondamentaux (Hiragana et Katakana).</li>
+                    <li>**Introduction au Kanji :** Début de l'étude des Kanjis de base (environ 100 caractères) pour le vocabulaire visuel et la lecture des mots simples.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <p class="fw-bold mb-1"><i class="bi bi-chat-dots me-1"></i> Grammaire & Tournures de Phrases :</p>
+                <ul class="list-unstyled small ms-3">
+                    <li>**Structures de Base :** Étude approfondie des particules essentielles et des structures de phrases complexes.</li>
+                    <li>**Politesse :** Apprentissage des formes de conjugaison de politesse (*te-form*, *masu-form*) pour une communication adaptée au contexte professionnel japonais.</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalAutonomy" tabindex="-1" aria-labelledby="modalAutonomyLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: var(--bs-primary); color: white;">
+        <h5 class="modal-title fw-bold" id="modalAutonomyLabel"><i class="bi bi-phone-vibrate-fill me-2"></i> Autonomie : Approfondissement Personnel</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="fw-bold text-secondary-custom">Méthodologie et Outils Numériques :</p>
+        <p>
+            En complément des cours, j'ai développé une approche autodidacte, exploitant la technologie pour une immersion quotidienne et ciblée, essentielle pour préparer un stage ouvrier de 4 semaines.
+        </p>
+        
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <h6 class="fw-bold text-primary"><i class="bi bi-translate me-1"></i> Traduction & Vocabulaire :</h6>
+                <ul class="list-unstyled small ms-3">
+                    <li>**Anki :** Utilisation de flashcards numériques pour consolider la mémorisation du vocabulaire spécifique à l'hôtellerie/restauration et des Kanjis avancés.</li>
+                    <li>**VoiceTra & Google Traduction :** Outils indispensables pour le décryptage des panneaux et la traduction instantanée des échanges oraux lors du séjour.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h6 class="fw-bold text-primary"><i class="bi bi-headset me-1"></i> Immersion Auditive & Culturelle :</h6>
+                <ul class="list-unstyled small ms-3">
+                    <li>**WaniKani/Similaires :** Utilisation d'applications de répétition espacée spécifiquement dédiées à l'apprentissage intensif des Kanjis et du lexique.</li>
+                    <li>**Podcasts/YouTube :** Écoute régulière de contenus natifs pour s'habituer au rythme de la langue et à la prononciation, facilitant la transition vers l'environnement réel du stage.</li>
+                </ul>
+            </div>
+        </div>
+
+        <blockquote class="blockquote mt-4 border-start border-3 ps-3 text-muted">
+            <p>« L'objectif est de dépasser le niveau scolaire pour atteindre une autonomie fonctionnelle, essentielle pour réussir le stage ouvrier de 4 semaines et interagir avec les collègues japonais. »</p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalGoals" tabindex="-1" aria-labelledby="modalGoalsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: var(--bs-primary); color: white;">
+        <h5 class="modal-title fw-bold" id="modalGoalsLabel"><i class="bi bi-flag-fill me-2"></i> Application : Objectifs d'Immersion à Yokohama</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="fw-bold text-secondary-custom">Capitaliser sur la Période Initiale (3 semaines) :</p>
+        <p>
+            La période initiale à Yokohama, centrée sur les cours et les activités culturelles, est une rampe de lancement pour le stage. Mes objectifs y sont clairs :
+        </p>
+        <ol class="mt-3">
+            <li class="mb-2">
+                **Maîtriser le Vocabulaire Routinier :** Utiliser immédiatement les cartes SUICA/PASMO, les transports, les *konbini* et les distributeurs pour intégrer le vocabulaire de survie et de service.
+            </li>
+            <li class="mb-2">
+                **Interactions Culturelles & Codes Sociaux :** Tirer le maximum des workshops chez Mme Kano (Shodo, Cérémonie du Thé) pour comprendre le *keigo* (langage de politesse) et les codes sociaux, directement applicables dans le milieu professionnel.
+            </li>
+            <li class="mb-2">
+                **Préparation au Stage et Visites :** Acquérir le vocabulaire technique lié à l'hôtellerie ou à la restauration  et préparer des phrases de politesse en vue des visites (EXOTEC) et du stage.
+            </li>
+        </ol>
+        <p class="mt-3 text-muted small">
+            Ce parcours construit assure que le stage de 4 semaines sera une véritable expérience d'immersion et non une simple découverte.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--________________________________________________________________________________________________________-->
     <section id="apercu" class="py-5 bg-section-light">
         <div class="container">
-            <h2 class="section-heading text-center">📅 Aperçu Global du Voyage</h2>
-            <div class="row text-center g-4">
-                <div class="col-md-4">
+            <h2 class="section-heading text-center">Séjour Linguistique & Stage Ouvrier</h2>
+            <div class="row justify-content-center text-center g-4">
+                <div class="col-md-6 col-lg-5">
                     <div class="card h-100 card-custom">
                         <div class="card-body">
                             <h3 class="card-title text-secondary-custom">Durée Totale</h3>
@@ -90,18 +292,9 @@
                 <div class="col-md-4">
                     <div class="card h-100 card-custom">
                         <div class="card-body">
-                            <h3 class="card-title text-secondary-custom">Dates Estimées</h3>
+                            <h3 class="card-title text-secondary-custom">Dates</h3>
                             <p class="fs-4 fw-bold">Juillet - Août 2026</p>
-                            <p class="card-text text-muted">Exemple 2025/2026 : Du 6 au 26 juillet (Séjour) et du 27 juillet au 22 août (Stage).</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 card-custom">
-                        <div class="card-body">
-                            <h3 class="card-title text-secondary-custom">Coût (Hors Avion)</h3>
-                            <p class="fs-4 fw-bold">171 000 JPY (env. 1000 €)</p>
-                            <p class="card-text text-muted">Inclut cours, hébergement (Hostel Zen), et activités culturelles. Budget total recommandé : **environ 3000 €**.</p>
+                            <p class="card-text text-muted">Du 6 au 26 juillet (Séjour) et du 27 juillet au 22 août (Stage).</p>
                         </div>
                     </div>
                 </div>
@@ -111,7 +304,7 @@
 
     <section id="programme" class="py-5">
         <div class="container">
-            <h2 class="section-heading text-center">📚 Programme d'Études et de Stage</h2>
+            <h2 class="section-heading text-center">Programme</h2>
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100 p-4 card-custom">
