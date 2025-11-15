@@ -287,14 +287,23 @@ ul.nav.nav-pills {
 }
 
 /* ---------- ÉTAT ACTIF AVEC HALO ANIMÉ ---------- */
+section.navigation .nav-pills .nav-link.active iconify-icon,
+section.navigation .nav-pills .nav-link.active .icon-grey {
+    /* C'est le filtre orange de votre thème, appliqué au contenu de l'icône active */
+    filter: invert(54%) 
+            sepia(89%) 
+            saturate(510%) 
+            hue-rotate(337deg) 
+            brightness(97%) 
+            contrast(95%) !important;
+}
 section.navigation .nav-pills .nav-link.active {
   position: relative;
-  filter: invert(54%) sepia(89%) saturate(510%) hue-rotate(337deg) brightness(97%) contrast(95%) !important;
   color: var(--accent-color)!important;
   font-weight: bold;
   background: none !important;
   box-shadow: none;
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
 }
 
 /* Halo animé autour de l’icône active */
