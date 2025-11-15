@@ -205,7 +205,7 @@ button.btn.btn-outline-primary {
 /* ---------- NAVIGATION BAR ---------- */
 section.navigation {
   width: fit-content;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 /* ---------- CONTAINER PRINCIPAL ---------- */
@@ -294,6 +294,7 @@ section.navigation .nav-pills .nav-link.active {
   font-weight: bold;
   background: none !important;
   box-shadow: none;
+  transition: all 0.5s ease;
 }
 
 /* Halo animé autour de l’icône active */
