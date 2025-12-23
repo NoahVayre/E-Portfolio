@@ -1,0 +1,263 @@
+<style>
+    /* VARIABLES CSS (À ASSURER DANS VOTRE FICHIER style.css) */
+    :root {
+        --bs-primary: #5D4037; /* Marron foncé */
+        --bs-secondary: #F26649; /* Orange Corail */
+        --bs-light-brown: #EFEBE9; /* Marron très clair pour le fond des sections */
+        --bs-dark: #241F21; /* Couleur du texte sombre */
+    }
+    .section-heading-sport {
+        color: var(--bs-secondary);
+        font-weight: 700;
+        text-transform: uppercase;
+        border-bottom: 3px solid var(--bs-primary);
+        padding-bottom: 10px;
+        margin-bottom: 50px;
+    }
+    .card-custom-sport {
+        border: 1px solid var(--bs-light-brown);
+        border-left: 5px solid var(--bs-secondary); /* Accent Orange Vif */
+        border-radius: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+    .card-custom-sport:hover {
+        transform: translateY(-5px);
+        border-left-color: var(--bs-dark);
+    }
+    .text-secondary-custom {
+        color: var(--bs-secondary) !important;
+    }
+    .image-placeholder-sport {
+        min-height: 250px;
+        background-color: #e0e0e0;
+        border: 2px dashed #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: italic;
+        color: var(--bs-primary);
+        text-align: center;
+    }
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+    }
+    .timeline:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background: var(--bs-secondary);
+    }
+    .timeline-item {
+        margin-bottom: 25px;
+        position: relative;
+    }
+    .timeline-item:before {
+        content: '\2726'; /* Icône d'étoile */
+        position: absolute;
+        left: -18px;
+        top: 0;
+        height: 30px;
+        width: 30px;
+        background: var(--bs-primary);
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+    }
+</style>
+
+
+<div class="container-fluid">
+        <div class="row">
+<div class="col-xl-6 offset-xl-2">
+    <div class="container content-container">
+    <section class="video-section col-xl-6 offset-xl-2">
+        <h1>Presentation video</h1>
+        <div class="video-container">
+            <iframe 
+            src="https://www.youtube.com/embed/5eEqVKGWHq4" 
+            title="Présentation de mon projet"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+            </iframe>
+        </div>
+
+        <h1>Presentation video</h1>
+        <div class="video-container">
+            <iframe 
+            src="https://www.youtube.com/embed/lofslSkQWzU" 
+            title="Présentation de mon projet"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    </div>
+</div>
+        </div>
+</div>
+
+<section id="pratique-sportive" class="py-5 bg-section-light">
+    <div class="container">
+        
+        <div class="row mb-5" data-aos="fade-up">
+            <div class="col-12">
+                <h2 class="section-heading-sport text-center">🇻🇳 Mon Engagement Sportif : Le Viet Vo Dao (Vovinam)</h2>
+                <p class="lead-paragraph text-center text-muted">
+                    Depuis plus de 11 ans, la pratique du **Viet Vo Dao (Vovinam Viêt Võ Đạo)** est au cœur de mon développement. Cet art martial vietnamien, fondé sur la polyvalence technique et une philosophie humaniste, a forgé ma discipline, ma résilience face à l'échec et mon sens de la responsabilité, des atouts essentiels pour mon parcours d'ingénieur.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-5 mb-5 align-items-center">
+            
+            <div class="col-lg-7" data-aos="fade-right">
+                <h3 class="fw-bold mb-4 border-bottom pb-2 text-secondary-custom">Un Parcours Construit : Maîtrise et Polyvalence Technique</h3>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <p class="mb-1 text-muted">Durée de Pratique</p>
+                        <h4 class="fw-bold">Plus de 11 ans de Vovinam assidu</h4>
+                        <p>
+                            Cette longévité démontre une capacité exceptionnelle à maintenir un engagement constant sur le très long terme. La progression dans le Viet Vo Dao exige une rigueur et une patience qui se transposent directement dans la gestion de projets complexes.
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <p class="mb-1 text-muted">Validation Technique (Juin)</p>
+                        <h4 class="fw-bold text-secondary-custom">Obtention du 2<sup>e</sup> Dan (Hồng Đai II)</h4>
+                        <p>
+                            L'acquisition du $2^{e}$ Dan, obtenu en juin, valide ma maîtrise de l'ensemble du programme technique, incluant les fameux **ciseaux volants**, les armes (sabre/bâton) et le combat souple et dur. Cela témoigne de ma **polyvalence** et de ma capacité à assimiler des techniques très diverses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5" data-aos="fade-left">
+                <div class="image-placeholder-sport rounded">
+                    <p class="fw-bold p-3">
+                        [Espace pour une photo de remise de ceinture ou une technique spectaculaire (ex: un ciseau volant ou un song luyen)]
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 mid-break">
+
+        <div class="row g-5 mb-5 align-items-center flex-row-reverse">
+            
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="image-placeholder-sport rounded">
+                    <p class="fw-bold p-3">
+                        [Espace pour une photo d'équipe de compétition ou lors d'un stage fédéral de Viet Vo Dao]
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left">
+                <h3 class="fw-bold mb-4 border-bottom pb-2 text-secondary-custom">L'Épreuve du Combat : Compétitions et Esprit VVD</h3>
+                
+                <div class="card card-custom-sport p-3 mb-4">
+                    <h5 class="fw-bold"><i class="bi bi-trophy-fill me-2 text-secondary-custom"></i> Participation à de Nombreuses Compétitions</h5>
+                    <p>
+                        J'ai participé régulièrement aux championnats en **Song Luyen** (combat conventionnel), en **Quyền** (formes) et en combat. Ces épreuves m'ont appris à :
+                    </p>
+                    <ul>
+                        <li><span class="fw-bold">Adapter ma Stratégie :</span> Évaluer rapidement l'adversaire et choisir la bonne technique parmi un large éventail (pieds, poings, ciseaux, lutte).</li>
+                        <li><span class="fw-bold">Maîtrise de Soi :</span> Gérer l'adrénaline et la fatigue pour maintenir la lucidité jusqu'à la fin de l'épreuve.</li>
+                    </ul>
+                </div>
+                
+                <div class="card card-custom-sport p-3">
+                    <h5 class="fw-bold"><i class="bi bi-people-fill me-2 text-secondary-custom"></i> Stages et Perfectionnement Technique</h5>
+                    <p>
+                        Ma formation est constamment enrichie par ma participation à de **nombreux stages techniques** avec des Maîtres et des experts vietnamiens et français. Cela garantit une pratique authentique et conforme à la tradition du Viet Vo Dao.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 mid-break">
+
+        <div class="row mb-5" data-aos="fade-up">
+            <div class="col-12">
+                <h3 class="section-heading-sport text-center">Pédagogie et Responsabilité : L'Aide à l'Enseignement</h3>
+                <p class="text-center text-muted mb-4">
+                    Mon engagement au sein du club s'étend à la transmission des valeurs et des techniques, un rôle formateur essentiel pour développer mon leadership et mes compétences pédagogiques.
+                </p>
+            </div>
+            
+            <div class="col-12">
+                <div class="accordion accordion-flush" id="accordionCoaching" data-aos="zoom-in">
+
+                    <div class="accordion-item card-custom-sport mb-2">
+                        <h2 class="accordion-header" id="headingDIF">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDIF" aria-expanded="false" aria-controls="collapseDIF">
+                                <span class="text-secondary-custom me-2"><i class="bi bi-mortarboard-fill"></i></span> Préparation du DIF : Formaliser la Capacité d'Instruction
+                            </button>
+                        </h2>
+                        <div id="collapseDIF" class="accordion-collapse collapse" aria-labelledby="headingDIF" data-bs-parent="#accordionCoaching">
+                            <div class="accordion-body">
+                                <p>
+                                    Je suis en cours de validation du DIF (Diplôme d'Instructeur Fédéral), indispensable pour encadrer officiellement. Cette démarche formalise ma capacité à :
+                                </p>
+                                <ul>
+                                    <li>**Structurer un Cours :** Appliquer les méthodologies pour la conception et la mise en œuvre d'exercices progressifs (UF1).</li>
+                                    <li>**Gérer un Groupe :** Assurer la sécurité et la cohésion, tout en transmettant la richesse technique du Viet Vo Dao (des bases aux techniques de ciseaux).</li>
+                                </ul>
+                                <p class="fw-bold border-start border-secondary ps-3 mt-3">
+                                    C'est une preuve concrète de ma capacité à **vulgariser, structurer et communiquer** des processus techniques complexes à un public hétérogène.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item card-custom-sport mb-2">
+                        <h2 class="accordion-header" id="headingTeaching">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTeaching" aria-expanded="false" aria-controls="collapseTeaching">
+                                <span class="text-secondary-custom me-2"><i class="bi bi-person-check-fill"></i></span> Rôle d'Encadrant : Le Mentorat au sein du Club
+                            </button>
+                        </h2>
+                        <div id="collapseTeaching" class="accordion-collapse collapse" aria-labelledby="headingTeaching" data-bs-parent="#accordionCoaching">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5 class="fw-bold">Enseignement Pédagogique</h5>
+                                        <ul>
+                                            <li>Aide à l'apprentissage des **Quyền** (formes) pour les débutants.</li>
+                                            <li>Travail sur la souplesse et la coordination nécessaires aux techniques de ciseaux.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="fw-bold">Organisation et Logistique</h5>
+                                        <ul>
+                                            <li>Participation active à l'organisation de **stages locaux** (partenariat et logistique).</li>
+                                            <li>Accompagnement et coaching des équipes de compétition.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-4" data-aos="fade-up">
+                        <div class="image-placeholder-sport rounded">
+                            <p class="fw-bold p-3">
+                                [Espace pour une photo de vous en Kimono d'instructeur, donnant une consigne ou aidant un élève]
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
