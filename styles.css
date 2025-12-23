@@ -1018,7 +1018,7 @@ team section style start
 
 /* Conteneur responsive */
 .video-container {
-  position: center;
+  position: relative;
   width: 80%;           /* largeur max de la vidéo */
   max-width: 800px;     /* limite sur grands écrans */
   margin: 0 auto;       /* centre horizontalement */
