@@ -95,6 +95,40 @@
         .text-secondary-custom {
             color: var(--bs-secondary) !important;
         }
+        .video-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.video-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Conteneur responsive */
+.video-container {
+  position: relative;
+  width: 80%;           /* largeur max de la vidéo */
+  max-width: 800px;     /* limite sur grands écrans */
+  margin: 0 auto;       /* centre horizontalement */
+  padding-bottom: 56.25%; /* ratio 16:9 (hauteur auto) */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Vidéo responsive */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
     </style>
 </head>
 <body>    
