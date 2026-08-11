@@ -48,61 +48,6 @@
 
 
 
-  
-<!--mkdown
-
-  __________Contenu Markdown 
-  <div id="content" class="markdown-body">Chargement...</div>
-
-   ___________marked.js pour convertir Markdown en HTML 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-  const select = document.getElementById("langSelect");
-  const contentDiv = document.getElementById("content");
-
-  let lang = localStorage.getItem("lang") || "fr";
-  select.value = lang;
-
-  function loadMarkdown(page) {
-    contentDiv.innerHTML = `<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Chargement...</span></div>`;
-    fetch(page)
-      .then(res => {
-        if (!res.ok) {
-          throw new Error(`Erreur : Impossible de charger ${page}`);
-        }
-        return res.text();
-      })
-      .then(md => {
-        if (md.trim() === "") {
-          throw new Error("Le fichier est vide.");
-        }
-        contentDiv.innerHTML = marked.parse(md);
-      })
-      .catch(err => {
-        contentDiv.innerHTML = `<p>Le contenu demandé est introuvable. Veuillez vérifier le fichier ou réessayer plus tard.</p>`;
-      });
-  }
-
-  loadMarkdown(`index_${lang}.md`);
-
-  select.addEventListener("change", () => {
-    lang = select.value;
-    localStorage.setItem("lang", lang);
-    loadMarkdown(`index_${lang}.md`);
-  });
-
-  document.addEventListener("click", (event) => {
-    const target = event.target;
-    if (target.tagName === "A" && target.getAttribute("href").endsWith(".md")) {
-      event.preventDefault();
-      const page = target.getAttribute("href");
-      loadMarkdown(page);
-    }
-  });
-</script>
--->
-
-
             <!-- bouton Menu moi-->
             <div class=" offcanvas-btn text-end m-3">
                 <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
@@ -146,7 +91,7 @@
 
                                 </div>
 
-                                <h4 class=" text-uppercase text-light fs-5 fw-bold py-2 mx-5 mt-5">Tools</h4>
+                                <h4 class=" text-uppercase text-light fs-5 fw-bold py-2 mx-5 mt-5">__</h4>
 
                                 <ul class="text-center list-unstyled">
                                     <li><a href="blog-single.html" class="text-uppercase "><span
@@ -1152,7 +1097,7 @@
 
                             </div>
 
-                            <h4 class=" text-uppercase text-light fs-5 fw-bold py-0 mx-5 mt-4">Tools</h4>
+                            
 
                             <ul class="text-center list-unstyled">
                                 <li><a href="blog-single.html" class="text-uppercase "><span
