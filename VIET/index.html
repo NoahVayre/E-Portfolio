@@ -5,6 +5,42 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<style>
+  /* Masquer la petite flèche par défaut du navigateur */
+  details.native-dropdown summary {
+    list-style: none;
+    cursor: pointer;
+    display: inline-block; /* Garde la taille de ton bouton */
+  }
+  details.native-dropdown summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  /* Animation d'apparition fluide */
+  details.native-dropdown[open] summary ~ * {
+    animation: fadeInDown 0.4s ease-out;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Style de la boîte contenant les résultats */
+  .palmares-box {
+    background-color: transparent;
+    border: 1px solid var(--accent-color, #F26649);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+  }
+</style>
 	<head>
 		<title>Massively by HTML5 UP</title>
 		<meta charset="utf-8" />
@@ -72,82 +108,114 @@ Beyond physical performance, Vovinam is vital to me for its profound philosophic
 
 							<section id="parcours-chrono" class="py-5">
 								<div class="container">
-									
-									<div class="row mb-5 text-center">
-										<div class="col-12 text-center" data-aos="fade-down">
-											<h2 class="section-heading-sport">My Martial Arts Timeline</h2>
-											<p class="text-muted">A decade of progression, learning, and transmission.</p>
-										</div>
-									</div>
 
-									<div class="main-timeline">
+        <div class="row mb-5 text-center">
+            <div class="col-12 text-center" data-aos="fade-down">
+                <h2 class="section-heading-sport">My Martial Arts Timeline</h2>
+                <p class="text-muted">A decade of progression, learning, and transmission.</p>
+            </div>
+        </div>
 
-										<div class="timeline-item" data-aos="fade-right">
-											<div class="timeline-dot"></div>
-											<div class="timeline-content">
-												<span class="timeline-date">2014</span>
-												<h4 class="fw-bold text-secondary-custom">Beginning of Practice</h4>
-												<p class="mb-0">
-													Discovery of Vovinam Viet Vo Dao. The start of a long-term commitment focused on discipline and body mastery.
-												</p>
-											</div>
-										</div>
+        <div class="main-timeline">
 
-										<div class="timeline-item" data-aos="fade-left">
-											<div class="timeline-dot"></div>
-											<div class="timeline-content">
-												<span class="timeline-date">2016 - 2022</span>
-												<h4 class="fw-bold text-secondary-custom">Competition Cycle</h4>
-												<p>Active participation in national and international circuits.</p>
-												<span class="badge bg-secondary">Technique (Quyền)</span>
-												<span class="badge bg-secondary">Combat</span>
-												<p class="mt-2 small text-muted">Development of stress management and performance under pressure.</p>
-											</div>
-										</div>
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2014</span>
+                    <h4 class="fw-bold text-secondary-custom">2014 -   Beginning of Practice</h4>
+                    <p class="mb-0">
+                        Discovery of Vovinam Viet Vo Dao. The start of a long-term commitment focused on discipline and body mastery.
+                    </p>
+                </div>
+            </div>
 
-										<div class="timeline-item" data-aos="fade-right">
-											<div class="timeline-dot"></div>
-											<div class="timeline-content">
-												<span class="timeline-date">2023 - Present</span>
-												<h4 class="fw-bold text-secondary-custom">Vovinam Occitan & Mentors</h4>
-												<p>
-													Joined the <strong>Vovinam Occitan</strong> club.
-													Advanced instruction under the guidance of:
-												</p>
-												<ul class="mb-0 list-unstyled">
-													<li><i class="bi bi-star-fill text-warning small"></i> Master <strong>Cyril Sandre</strong> (5th Dang)</li>
-													<li><i class="bi bi-star-fill text-warning small"></i> <strong>Fabien Laforet</strong> (4th Dang)</li>
-												</ul>
-											</div>
-										</div>
 
-										<div class="timeline-item" data-aos="fade-left">
-											<div class="timeline-dot"></div>
-											<div class="timeline-content">
-												<span class="timeline-date">June 2024</span>
-												<h4 class="fw-bold" style="color: #d35400;">Achievement of 2nd Dang</h4>
-												<p>
-													Successful grading before the federal jury.
-													Validation of advanced technical mastery (Scissors, Weapons, Combat).
-												</p>
-											</div>
-										</div>
 
-										<div class="timeline-item" data-aos="fade-right">
-											<div class="timeline-dot"></div>
-											<div class="timeline-content">
-												<span class="timeline-date">In Progress</span>
-												<h4 class="fw-bold text-secondary-custom">Instruction & Pedagogy (DIF)</h4>
-												<p>
-													Preparation for the <strong>Federal Instructor Diploma</strong>.
-													Engagement as an assistant instructor to transmit the values of Vovinam to new generations.
-												</p>
-											</div>
-										</div>
+<div class="timeline-item" data-aos="fade-left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <span class="timeline-date">2016 - 2022</span>
+        <h4 class="fw-bold text-secondary-custom">2016 - 2022   Competition Cycle</h4>
+        <p>Active participation in national and international circuits.</p>
+        <p><strong>Technique</strong> (Quyền)</p>
+        <p><strong>Fighting</strong></p>
+        <p class="mt-2 small text-muted">Development of <strong>stress management</strong> and performance under pressure.</p>
+        
+        <!-- MENU DÉROULANT NATIF HTML5 (Aucun JS, Aucun bug) -->
+        <details class="native-dropdown mt-3">
+            
+            <!-- LE BOUTON -->
+            <summary class="button large">More / Palmarès</summary>
+            
+            <!-- LE CONTENU QUI SE DÉROULE -->
+            <div class="palmares-box shadow-sm text-start">
+                <h5 class="fw-bold mb-3" style="color: var(--accent-color);">
+                    <i class="bi bi-trophy-fill text-warning me-2"></i>Palmarès & Résultats
+                </h5>
+                <ul class="list-unstyled mb-0" style="font-size: 15px; color: var(--body-text-color);">
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        <strong>European championship :</strong> 3rd place in fighting. 
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        <strong>[Nom de la compétition] :</strong> [Ta médaille / Ton classement]
+                    </li>
+                    <li>
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        <strong>[Nom de la compétition] :</strong> [Ta médaille / Ton classement]
+                    </li>
+                </ul>
+            </div>
+            
+        </details>
 
-									</div>
-								</div>
-							</section>
+    </div>
+</div>
+
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2023 - Present</span>
+                    <h4 class="fw-bold text-secondary-custom">2023 - Present   Vovinam Occitan & Mentors</h4>
+                    <p>
+                        Joined the <strong>Vovinam Occitan</strong> club.
+                        Advanced instruction under the guidance of:
+                    </p>
+                    <ul class="mb-0 list-unstyled">
+                        <li><i class="bi bi-star-fill text-warning small"></i> Master <strong>Cyril Sandre</strong> (5th Dang)</li>
+                        <li><i class="bi bi-star-fill text-warning small"></i> <strong>Fabien Laforet</strong> (4th Dang)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">June 2024</span>
+                    <h4 class="fw-bold" style="color: #d35400;">Achievement of 2nd Dang</h4>
+                    <p>
+                        Successful grading before the federal jury.
+                        Validation of advanced technical mastery (Scissors, Weapons, Combat).
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">In Progress</span>
+                    <h4 class="fw-bold text-secondary-custom">Instruction & Pedagogy (DIF)</h4>
+                    <p>
+                        Preparation for the <strong>Federal Instructor Diploma</strong>.
+                        Engagement as an assistant instructor to transmit the values of Vovinam to new generations.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 
 
