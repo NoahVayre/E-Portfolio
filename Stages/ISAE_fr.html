@@ -1,0 +1,376 @@
+<div id="isae-portfolio">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Nunito+Sans:wght@400;600;700;800&display=swap');
+
+    #isae-portfolio {
+      --bg-color: #F5F3EB;
+      --dark-color: #241F21;
+      --accent-color: #F26649;
+      --text-color: #555555;
+      --light-accent: rgba(242, 102, 73, 0.1);
+      
+      --font-heading: 'Inter', sans-serif;
+      --font-body: 'Nunito Sans', sans-serif;
+
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-body);
+      line-height: 1.85;
+      font-size: 17px;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    #isae-portfolio * {
+      box-sizing: border-box;
+    }
+
+    #isae-portfolio h1, #isae-portfolio h2, #isae-portfolio h3, #isae-portfolio h4 {
+      font-family: var(--font-heading);
+      color: var(--dark-color);
+      margin-top: 0;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    #isae-portfolio p {
+      margin-bottom: 1.5rem;
+    }
+
+    .isae-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    /* Hero Section */
+    .isae-hero {
+      padding: 120px 0 80px 0;
+      text-align: center;
+    }
+
+    .isae-badge {
+      display: inline-block;
+      background-color: var(--light-accent);
+      color: var(--accent-color);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    .isae-hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 900;
+      margin-bottom: 25px;
+      letter-spacing: -1px;
+    }
+
+    .isae-hero p {
+      font-size: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--dark-color);
+      font-weight: 600;
+    }
+
+    .isae-main-image-wrapper {
+      width: 100%;
+      height: 65vh;
+      min-height: 450px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 100px;
+      box-shadow: 0 20px 40px rgba(36, 31, 33, 0.1);
+      position: relative;
+    }
+
+    .isae-main-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Narrative Sections */
+    .isae-story-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
+      margin-bottom: 120px;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .isae-story-section {
+        grid-template-columns: 1fr 1fr;
+      }
+      .isae-story-reverse {
+        direction: rtl;
+      }
+      .isae-story-reverse > * {
+        direction: ltr;
+      }
+    }
+
+    .isae-story-content h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .isae-story-content h2::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 60px;
+      height: 5px;
+      background-color: var(--accent-color);
+      border-radius: 3px;
+    }
+
+    .isae-story-content p {
+      font-size: 17px;
+      text-align: justify;
+    }
+
+    .isae-highlight-box {
+      background-color: white;
+      border-left: 4px solid var(--accent-color);
+      padding: 25px 30px;
+      border-radius: 0 15px 15px 0;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .isae-highlight-box p {
+      margin: 0;
+      font-weight: 700;
+      color: var(--dark-color);
+      font-style: italic;
+    }
+
+    .isae-image-card {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      height: 100%;
+      min-height: 400px;
+    }
+
+    .isae-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .isae-image-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Vision Ingénieur */
+    .isae-vision {
+      background-color: var(--dark-color);
+      border-radius: 30px;
+      padding: 100px 5%;
+      margin: 100px 0 60px 0;
+      color: var(--bg-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .isae-vision::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(242,102,73,0.1) 0%, rgba(36,31,33,0) 70%);
+      border-radius: 50%;
+    }
+
+    .isae-vision-header {
+      text-align: center;
+      margin-bottom: 70px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .isae-vision-header h2 {
+      color: var(--bg-color);
+      font-size: 3rem;
+      margin-bottom: 25px;
+    }
+
+    .isae-vision-header p {
+      color: #CECBC7;
+      font-size: 19px;
+    }
+
+    .isae-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .isae-card {
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .isae-card:hover {
+      transform: translateY(-10px);
+      background-color: rgba(255, 255, 255, 0.06);
+      border-color: rgba(242, 102, 73, 0.3);
+    }
+
+    .isae-icon {
+      width: 60px;
+      height: 60px;
+      color: var(--accent-color);
+      margin-bottom: 25px;
+    }
+
+    .isae-card h4 {
+      color: var(--bg-color);
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .isae-card p {
+      color: #CECBC7;
+      margin: 0;
+      font-size: 16px;
+      text-align: justify;
+    }
+  </style>
+
+  <!-- EN-TÊTE -->
+  <header class="isae-hero isae-container">
+    <span class="isae-badge">Stage de Recherche — 28 avril au 27 juin 2025</span>
+    <h1>ISAE-SUPAERO</h1>
+    <p>Caractérisation des signaux GNSS au sein du laboratoire DEOS / Équipe NAVIRES. Une immersion totale mêlant physique des ondes, traitement du signal algorithmique et ingénierie expérimentale.</p>
+  </header>
+
+  <div class="isae-container">
+    
+    <!-- IMAGE PRINCIPALE -->
+    <div class="isae-main-image-wrapper">
+      <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1920&q=80" alt="Laboratoire de recherche, ondes et modélisation">
+    </div>
+
+    <!-- BLOC 1 : LE CONTEXTE GNSS -->
+    <div class="isae-story-section">
+      <div class="isae-story-content">
+        <h2>La physique complexe de la géolocalisation</h2>
+        <p>Ce stage s'est déroulé au sein de l'équipe NAVIRES du département DEOS (Département Électronique, Optronique et Signal) de l'ISAE-SUPAERO. Ma mission centrale consistait à améliorer le Projet Expérimental (PREX) destiné aux étudiants de première année. Le but ? Démystifier le positionnement GNSS (Global Navigation Satellite System) et illustrer, par l'expérience, les limites des signaux satellitaires et les méthodes de filtrage mathématique permettant de les contourner.</p>
+        <p>Le positionnement par satellite repose sur la trilatération et le calcul de la "pseudo-distance". L'antenne réceptrice déduit la distance la séparant du satellite en mesurant le temps de propagation de l'onde radio. Cependant, une erreur d'à peine quelques nanosecondes sur la lecture du signal induit un décalage de plusieurs mètres sur Terre. Outre les biais d'horloge, le signal traverse l'ionosphère et la troposphère, subissant des réfractions, des atténuations, et des "multitrajets" (rebonds sur les bâtiments) qui faussent sa lecture.</p>
+        <div class="isae-highlight-box">
+          <p>"L'objectif de la recherche en GNSS n'est pas seulement de recevoir un signal, mais de concevoir des modèles physiques et mathématiques capables de discriminer l'information utile du bruit environnemental pour reconstruire une distance réelle."</p>
+        </div>
+      </div>
+      <div class="isae-image-card">
+        <img src="https://images.unsplash.com/photo-1581093806997-124204d9fa9d?auto=format&fit=crop&w=800&q=80" alt="Analyse de signaux en laboratoire">
+      </div>
+    </div>
+
+    <!-- BLOC 2 : MODÉLISATION ET FILTRAGE -->
+    <div class="isae-story-section isae-story-reverse">
+      <div class="isae-story-content">
+        <h2>Traitement du signal et algorithmes d'estimation</h2>
+        <p>Pour contrer les imprécisions inhérentes aux pseudo-distances, j'ai dû m'approprier et optimiser des programmes de traitement en langage MATLAB. Mon travail d'analyse s'est porté sur l'évaluation comparative de trois algorithmes d'estimation de position :</p>
+        <p><strong>1. Les Moindres Carrés Simples (LS) :</strong> Cette méthode vise à minimiser l'erreur quadratique globale pour résoudre le système d'équations non linéaires linéarisé via une matrice Jacobienne. Bien que robuste dans l'absolu, ce filtre est "aveugle" : il accorde le même poids à un signal pur qu'à un signal fortement perturbé par un bâtiment.</p>
+        <p><strong>2. Les Moindres Carrés Pondérés (WLS) :</strong> J'ai analysé l'implémentation d'une matrice de pondération. Ce poids mathématique se basait sur le <strong>C/N0 (Carrier-to-Noise ratio)</strong> de chaque satellite. L'algorithme donne ainsi plus d'importance aux signaux de haute qualité, réduisant mécaniquement l'impact des signaux dégradés ou atténués.</p>
+        <p><strong>3. Le Filtre de Kalman Étendu (EKF) :</strong> Cet estimateur bayésien récursif fonctionne en deux temps : une étape de prédiction (basée sur un modèle de déplacement physique) et une étape de correction (basée sur la nouvelle mesure). Bien qu'il fournisse des trajectoires beaucoup plus fluides et stables, j'ai pu démontrer qu'une mauvaise initialisation du filtre pouvait temporairement dégrader les résultats de façon spectaculaire.</p>
+      </div>
+      <div class="isae-image-card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Code Matlab et données analytiques">
+      </div>
+    </div>
+
+    <!-- BLOC 3 : EXPÉRIMENTATION TERRAIN (DGNSS) -->
+    <div class="isae-story-section">
+      <div class="isae-story-content">
+        <h2>L'épreuve du terrain : DGNSS, statique et dynamique</h2>
+        <p>Afin de confronter mes algorithmes à la réalité, j'ai défini un protocole expérimental rigoureux et mené des campagnes de mesures avec un récepteur <strong>uBlox EVK-M8T</strong> couplé à une antenne <strong>NovAtel VEXXIS</strong>. Pour obtenir une vérité terrain incontestable, j'ai utilisé la technique <strong>DGNSS (Differential GNSS)</strong> en exploitant une antenne fixe placée sur le toit de l'ISAE dont les coordonnées absolues étaient parfaitement connues, permettant d'annuler les erreurs communes (ionosphériques notamment).</p>
+        <p><strong>Étude statique : L'impact du DOP.</strong> Les résultats ont mis en évidence la vulnérabilité environnementale du système. En milieu dégagé, l'erreur absolue moyenne (RMSE) des filtres avoisinait les 4,8 mètres. En environnement urbain, cette erreur doublait (RMSE ~ 11,7 mètres). Ce déficit s'explique par la dégradation du <strong>DOP (Dilution of Precision)</strong> : les bâtiments obstruant les signaux latéraux forçaient le calcul à s'appuyer sur des satellites très regroupés au zénith, créant une mauvaise géométrie de trilatération.</p>
+        <p><strong>Étude dynamique : Le canyon urbain.</strong> Lors de tests embarqués, j'ai analysé le phénomène des multitrajets. Contre-intuitivement, un passage rapide (28 km/h) donnait des résultats de positionnement moins chaotiques qu'un passage lent (12 km/h). La raison ? À vitesse élevée, les ondes réfléchies n'ont pas le temps matériel d'induire une erreur persistante dans la boucle de poursuite du récepteur. Dans ces scénarios dynamiques, le Filtre de Kalman démontrait d'ailleurs son écrasante supériorité pour corriger la trajectoire.</p>
+      </div>
+      <div class="isae-image-card">
+        <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80" alt="Matériel expérimental, antennes et récepteurs">
+      </div>
+    </div>
+
+    <!-- BLOC 4 : INGÉNIERIE MÉCANIQUE ET CAO -->
+    <div class="isae-story-section isae-story-reverse">
+      <div class="isae-story-content">
+        <h2>Conception 3D : L'intégration matérielle</h2>
+        <p>Les campagnes dynamiques nécessitaient l'utilisation d'une petite voiturette électrique de golf du département. Problème : aucune modification définitive du véhicule n'était autorisée, et l'antenne devait impérativement être fixée à l'extérieur pour capter le ciel de manière hémisphérique.</p>
+        <p>Au-delà du traitement logiciel, j'ai donc dû concevoir physiquement un support mécanique. En m'inspirant d'un "Multi Clamp" utilisé en lutherie (Millenium MC900), j'ai modélisé sur un logiciel de CAO un bras articulé amovible. Le cahier des charges était complexe : la pièce devait résister aux vibrations du roulage, surélever l'antenne au-dessus du toit pour maximiser le champ de vision satellitaire, et surtout, l'éloigner du poste de commande informatique, dont les rayonnements d'écran créaient des interférences avec les signaux radio.</p>
+        <p>Enfin, cette conception intégrait une contrainte mathématique de <strong>changement de référentiel</strong> : il fallait mesurer précisément la distance (le bras de levier) entre l'antenne sur le toit et la centrale inertielle (IMU) placée dans la mallette d'acquisition, afin que les algorithmes puissent recaler correctement les données d'accélération et de position sur un point unique.</p>
+      </div>
+      <div class="isae-image-card">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c80a30?auto=format&fit=crop&w=800&q=80" alt="CAO, modélisation 3D et véhicule d'essai">
+      </div>
+    </div>
+
+    <!-- BLOC 5 : VISION INGÉNIEUR ET TRANSITION -->
+    <div class="isae-vision">
+      <div class="isae-vision-header">
+        <h2>Projet Professionnel & Enjeux Sociétaux</h2>
+        <p>Ce stage a agi comme un véritable révélateur. Bien loin d'un parcours industriel classique, l'immersion dans un laboratoire de recherche (DEOS) a profondément clarifié mes ambitions d'ingénieur.</p>
+      </div>
+
+      <div class="isae-grid">
+        
+        <!-- Carte 1 -->
+        <div class="isae-card">
+          <div class="isae-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          </div>
+          <h4>Recherche & Systèmes Embarqués</h4>
+          <p>La compréhension des boucles de poursuite (PLL, DLL) et l'hybridation des données inertielles et satellitaires ont confirmé mon vif intérêt pour le traitement du signal et l'architecture des systèmes embarqués de haute précision, particulièrement applicables au secteur spatial.</p>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="isae-card">
+          <div class="isae-icon">
+             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h4>Démarche R&D Pluridisciplinaire</h4>
+          <p>J'ai appris à apprécier l'absence de "pression de rendement immédiat", propre à la R&D. Pouvoir formuler des hypothèses, développer des algorithmes complexes, concevoir des pièces de montage physiques, et analyser les échecs constitue l'essence même de l'ingénierie que je souhaite poursuivre.</p>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="isae-card">
+          <div class="isae-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h4>Impact Sociétal (TES)</h4>
+          <p>Bien que purement technique, l'optimisation GNSS répond à un enjeu écologique fort. Des algorithmes de localisation infaillibles sont le prérequis pour optimiser l'agriculture de précision ou la navigation autonome des transports, permettant de réduire drastiquement l'empreinte carbone globale des flottes logistiques.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
