@@ -1146,6 +1146,29 @@
         </div>
     </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Crée un observateur qui regarde quand les éléments apparaissent à l'écran
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // Si la barre de compétence est visible à l'écran
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          // On applique la largeur stockée dans "data-width"
+          bar.style.width = bar.getAttribute('data-width');
+          // On arrête d'observer pour que l'animation ne se relance pas à chaque scroll
+          observer.unobserve(bar); 
+        }
+      });
+    }, { threshold: 0.2 }); // Se déclenche quand au moins 20% de la barre est visible
+
+    // On dit à l'observateur de surveiller toutes nos barres de compétences
+    document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+      observer.observe(bar);
+    });
+  });
+</script>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -1203,28 +1226,7 @@
         }
     });
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Crée un observateur qui regarde quand les éléments apparaissent à l'écran
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        // Si la barre de compétence est visible à l'écran
-        if (entry.isIntersecting) {
-          const bar = entry.target;
-          // On applique la largeur stockée dans "data-width"
-          bar.style.width = bar.getAttribute('data-width');
-          // On arrête d'observer pour que l'animation ne se relance pas à chaque scroll
-          observer.unobserve(bar); 
-        }
-      });
-    }, { threshold: 0.2 }); // Se déclenche quand au moins 20% de la barre est visible
 
-    // On dit à l'observateur de surveiller toutes nos barres de compétences
-    document.querySelectorAll('.skill-bar-fill').forEach(bar => {
-      observer.observe(bar);
-    });
-  });
-</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
