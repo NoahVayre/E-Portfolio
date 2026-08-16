@@ -708,9 +708,17 @@ div#progressbar-tooltip-id {
     height: 100%;
     background-color: var(--accent-color, #F26649);
     border-radius: 10px;
-    width: 0; /* On force le départ à 0 */
-    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Animation fluide */
+    width: 0; /* Départ à 0 */
+    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
   }
+
+  /* 
+   * DÉCLENCHEMENT AOS 
+   * Quand le conteneur parent reçoit la classe .aos-animate, les barres se remplissent.
+   */
+  .aos-animate .bar-modelisation { width: 60%; }
+  .aos-animate .bar-management { width: 75%; }
+  .aos-animate .bar-programmation { width: 70%; }
 /* ----------  portfolio section  ----------  */
 
 button.filter-button {
