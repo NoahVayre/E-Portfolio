@@ -708,15 +708,9 @@ div#progressbar-tooltip-id {
     height: 100%;
     background-color: var(--accent-color, #F26649);
     border-radius: 10px;
-    animation: fillBar 1.5s ease-out forwards;
-    transform-origin: left;
+    width: 0; /* On force le départ à 0 */
+    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Animation fluide */
   }
-
-  @keyframes fillBar {
-    0% { transform: scaleX(0); }
-    100% { transform: scaleX(1); }
-  }
-
 /* ----------  portfolio section  ----------  */
 
 button.filter-button {
