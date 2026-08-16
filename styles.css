@@ -648,6 +648,75 @@ div#progressbar-tooltip-id {
 }
 
 
+
+
+.skills-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .skill-title-main {
+    color: var(--dark-color, #241F21);
+    margin-bottom: 40px;
+  }
+
+  .skill-box {
+    margin-bottom: 35px;
+  }
+
+  .skill-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .skill-icon {
+    font-size: 40px;
+    color: var(--accent-color, #F26649);
+    margin-right: 15px;
+  }
+
+  .skill-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skill-title {
+    font-weight: 700;
+    color: var(--dark-color, #241F21);
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .skill-percent {
+    color: var(--accent-color, #F26649);
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+
+  .skill-bar-track {
+    width: 100%;
+    height: 12px;
+    background-color: rgba(242, 102, 73, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .skill-bar-fill {
+    height: 100%;
+    background-color: var(--accent-color, #F26649);
+    border-radius: 10px;
+    animation: fillBar 1.5s ease-out forwards;
+    transform-origin: left;
+  }
+
+  @keyframes fillBar {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+
 /* ----------  portfolio section  ----------  */
 
 button.filter-button {
