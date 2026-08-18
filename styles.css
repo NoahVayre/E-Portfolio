@@ -1114,3 +1114,12 @@ team section style start
   border-radius: 12px;
 }
 
+@media (max-width: 768px) {
+  /* Si ton titre a une classe spécifique, remplace h1, h2 par cette classe (ex: .mon-gros-titre) */
+  h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+  }
+}
