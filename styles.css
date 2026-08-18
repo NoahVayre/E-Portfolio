@@ -719,6 +719,9 @@ div#progressbar-tooltip-id {
   .aos-animate .bar-modelisation { width: 60%; }
   .aos-animate .bar-management { width: 75%; }
   .aos-animate .bar-programmation { width: 70%; }
+  .aos-animate .bar-traitement { width: 80%; }
+  .aos-animate .bar-interculturel { width: 85%; }
+  .aos-animate .bar-ecoconception { width: 75%; }
 /* ----------  portfolio section  ----------  */
 
 button.filter-button {
